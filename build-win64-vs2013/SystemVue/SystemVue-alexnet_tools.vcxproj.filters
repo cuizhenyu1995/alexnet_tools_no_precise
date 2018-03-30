@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\my_systemvue_work\alexnet_tools\source\SystemVue\LibraryProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="in.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="layer1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="layer2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="layer3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="layer4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="layer5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="layer6.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="layer7.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="layer8.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="softmax.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test_conv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test_fc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\my_systemvue_work\alexnet_tools\source\SystemVue\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="D:\my_systemvue_work\alexnet_tools\build-win64-vs2013\SystemVue\Version.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8FC8637D-3D55-49E3-8E5D-B478C7B870A3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="in.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="layer1.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="layer2.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="layer3.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="layer4.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="layer5.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="layer6.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="layer7.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="layer8.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="softmax.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="test_conv.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="test_fc.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

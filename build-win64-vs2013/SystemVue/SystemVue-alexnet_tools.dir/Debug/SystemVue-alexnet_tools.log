@@ -1,0 +1,46 @@
+﻿Build started 2018/3/30 16:42:04.
+     1>Project "D:\my_systemvue_work\alexnet_tools\build-win64-vs2013\SystemVue\SystemVue-alexnet_tools.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files\SystemVue2016.08\ModelBuilder\include" /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DLL /D SV_MODEL_BUILDER /D LIBNAME=alexnet_tools /D _UNICODE /D UNICODE /D _USRDLL /D "CMAKE_INTDIR=\"Debug\"" /D SystemVue_alexnet_tools_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"SystemVue-alexnet_tools.dir\Debug\\" /Fd"SystemVue-alexnet_tools.dir\Debug\vc120.pdb" /Gd /TP /errorReport:prompt layer8.cpp
+         layer8.cpp
+     1>layer8.cpp(108): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(118) : see declaration of 'strcat'
+     1>layer8.cpp(109): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(118) : see declaration of 'strcat'
+     1>layer8.cpp(110): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(118) : see declaration of 'strcat'
+     1>layer8.cpp(111): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+     1>layer8.cpp(125): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>layer8.cpp(192): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(118) : see declaration of 'strcat'
+     1>layer8.cpp(193): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(118) : see declaration of 'strcat'
+     1>layer8.cpp(194): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(118) : see declaration of 'strcat'
+     1>layer8.cpp(195): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+     1>layer8.cpp(210): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\my_systemvue_work\alexnet_tools\build-win64-vs2013\SystemVue\Debug\alexnet_tools.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\Program Files\SystemVue2016.08\\ModelBuilder\lib\Win64\SystemVueDataFlow.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/my_systemvue_work/alexnet_tools/build-win64-vs2013/SystemVue/Debug/alexnet_tools.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/my_systemvue_work/alexnet_tools/build-win64-vs2013/SystemVue/Debug/alexnet_tools.lib" /MACHINE:X64  /machine:x64 /debug /DLL "SystemVue-alexnet_tools.dir\Debug\Version.res"
+         "SystemVue-alexnet_tools.dir\Debug\LibraryProperties.obj"
+         "SystemVue-alexnet_tools.dir\Debug\in.obj"
+         "SystemVue-alexnet_tools.dir\Debug\layer1.obj"
+         "SystemVue-alexnet_tools.dir\Debug\layer2.obj"
+         "SystemVue-alexnet_tools.dir\Debug\layer3.obj"
+         "SystemVue-alexnet_tools.dir\Debug\layer4.obj"
+         "SystemVue-alexnet_tools.dir\Debug\layer5.obj"
+         "SystemVue-alexnet_tools.dir\Debug\layer6.obj"
+         "SystemVue-alexnet_tools.dir\Debug\layer7.obj"
+         "SystemVue-alexnet_tools.dir\Debug\layer8.obj"
+         "SystemVue-alexnet_tools.dir\Debug\softmax.obj"
+         "SystemVue-alexnet_tools.dir\Debug\test_conv.obj"
+         "SystemVue-alexnet_tools.dir\Debug\test_fc.obj"
+         SystemVue-alexnet_tools.vcxproj -> D:\my_systemvue_work\alexnet_tools\build-win64-vs2013\SystemVue\Debug\alexnet_tools.dll
+     1>Done Building Project "D:\my_systemvue_work\alexnet_tools\build-win64-vs2013\SystemVue\SystemVue-alexnet_tools.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.08

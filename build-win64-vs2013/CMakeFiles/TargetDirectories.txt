@@ -1,0 +1,3 @@
+D:/my_systemvue_work/alexnet_tools/build-win64-vs2013/SystemVue/CMakeFiles/SystemVue-alexnet_tools.dir
+D:/my_systemvue_work/alexnet_tools/build-win64-vs2013/CMakeFiles/ALL_BUILD.dir
+D:/my_systemvue_work/alexnet_tools/build-win64-vs2013/CMakeFiles/ZERO_CHECK.dir

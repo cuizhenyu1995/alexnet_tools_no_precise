@@ -1,0 +1,3766 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<!DOCTYPE GENESYSV1.00>
+
+<Item Type="WorkspaceData" >
+<Version >1.17</Version>
+<Item XName="Page" Type="PageMgr" />
+<IsOpen ><T>Bool</T><D>1</D></IsOpen>
+<Item XName="Variables" Type="SerItem" />
+<Item XName="Designs" UserName="Designs" Type="Folder" >
+<Item XName="Page" Type="PageMgr" />
+<IsOpen ><T>Bool</T><D>1</D></IsOpen>
+<Item XName="Design1" UserName="Design1" Type="Design" >
+<Item XName="Page" Type="PageMgr" >
+<Item XName="Display0" Type="DesignDisp" >
+<Item XName="TabInfo" Type="SerItem" >
+<Item XName="Schematic" Type="TabInfo" >
+<PageNo ><T>Int</T><D>0</D></PageNo></Item>
+<Item XName="PartList" Type="TabInfo" >
+<PageNo ><T>Int</T><D>0</D></PageNo></Item></Item>
+<PVPort ><T>Array_Dbl64</T><D>1;4;;;GlidT9nnX24;ZTGs1P7q014</D></PVPort>
+<DVport ><T>Array_Dbl64</T><D>1;4;;;Of14;804</D></DVport>
+<CurTab >Schematic</CurTab>
+<Window ><T>Array_I64</T><D>1;4;;;S3;g</D></Window>
+<ShowCmd ><T>Int</T><D>1</D></ShowCmd>
+<Show ><T>Bool</T><D>1</D></Show>
+<ZOrder ><T>Int</T><D>1</D></ZOrder></Item>
+<Item XName="Display1" Type="DesignDisp" >
+<Item XName="TabInfo" Type="SerItem" >
+<Item XName="Schematic" Type="TabInfo" >
+<PageNo ><T>Int</T><D>1</D></PageNo></Item></Item>
+<PVPort ><T>Array_Dbl64</T><D>1;4;;;GJz24;WLUtd24</D></PVPort>
+<DVport ><T>Array_Dbl64</T><D>1;4;;;ocEUzxu8B24;OI8qB74lr14</D></DVport>
+<CurTab >Schematic</CurTab>
+<Show ><T>Bool</T><D>0</D></Show></Item></Item>
+<Item XName="PartList" Type="PartList" >
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Item XName="Page" Type="PageMgr" >
+<Item XName="Display0" Type="PartListDisp" >
+<PVPort ><T>Array_Dbl64</T><D>1;4;qCpCpCpZA2C;QcPcPcvBH2C;pCpCpCdG234;pCpCpCNe734</D></PVPort>
+<DVport ><T>Array_Dbl64</T><D>1;4;;;G24;G24</D></DVport></Item></Item>
+<Item XName="S1" Type="Part" >
+<Item XName="ParamSet" Type="ParamSet" />
+<ParentPartName >softmax@alexnet_tools Parts</ParentPartName>
+<SectionNum ><T>Int</T><D>0</D></SectionNum>
+<Model >softmax@alexnet_tools Models</Model>
+<MathLang ><T>Bool</T><D>1</D></MathLang>
+<Symbol >AutoSymDF</Symbol>
+<ShortSymbol />
+<Footprint />
+<Category >alexnet_simple_fully_connected</Category>
+<Netlist >IN_D,18?Connect16|IN_N,20?Connect17|OUT_D,22?Connect18|OUT_N,17</Netlist>
+<SimOverride ><T>Int</T><D>1</D></SimOverride>
+<DisabledNetlist >IN_D,18?Connect16|IN_N,20?Connect17|OUT_D,22?Connect18|OUT_N,17</DisabledNetlist></Item>
+<Item XName="D1" Type="Part" >
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="Format" Type="PartParam" >
+<Description >Format of data to be packed into matrix</Description>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >DynamicUnpack_M__Format@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item></Item>
+<Description >Unpack variable-size matrices into samples</Description>
+<ParentPartName >DynamicUnpack_M@Algorithm Design</ParentPartName>
+<SectionNum ><T>Int</T><D>0</D></SectionNum>
+<Model >DynamicUnpack_M@Data Flow Models</Model>
+<MathLang ><T>Bool</T><D>1</D></MathLang>
+<Symbol >SYM_DynamicUnpack_M</Symbol>
+<ShortSymbol />
+<Footprint />
+<Category >Dynamic;Math Matrix;Type Converters</Category>
+<Netlist >input,22?Connect18|output,23?Connect19|numRows,19|numColumns,21</Netlist>
+<SimOverride ><T>Int</T><D>1</D></SimOverride>
+<DisabledNetlist >input,22?Connect18|output,23?Connect19|numRows,19|numColumns,21</DisabledNetlist></Item>
+<Item XName="S2" Type="Part" >
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="StartStopOption" Type="PartParam" >
+<Description >Sink collection mode</Description>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__StartStopOption@Data Flow Enums</Enum>
+<Data ><T>Int</T><D>1</D></Data></Item>
+<Item XName="SampleStart" Type="PartParam" >
+<Description >Sample number to start data collection</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[0:inf)</Range>
+<DocSymbol />
+<HideCondition >StartStopOption == 2</HideCondition>
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="SampleStop" Type="PartParam" >
+<Description >Sample number to stop data collection</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[SampleStart:inf)</Range>
+<DocSymbol />
+<HideCondition >StartStopOption == 2</HideCondition>
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >2 - 1</DataEntry>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="TimeStart" Type="PartParam" >
+<Description >Time to start data collection</Description>
+<Unit ><T>Int</T><D>7004</D></Unit>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[0:inf)</Range>
+<DocSymbol />
+<HideCondition >StartStopOption == 1</HideCondition>
+<Validate ><T>Int</T><D>0</D></Validate>
+<DataEntry >Start_Time</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="TimeStop" Type="PartParam" >
+<Description >Time to stop data collection</Description>
+<Unit ><T>Int</T><D>7004</D></Unit>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[TimeStart:inf)</Range>
+<DocSymbol />
+<HideCondition >StartStopOption == 1</HideCondition>
+<Validate ><T>Int</T><D>0</D></Validate>
+<DataEntry >Stop_Time</DataEntry>
+<Data ><T>Double</T><D>0.000999</D></Data></Item>
+<Item XName="SinkTarget" Type="PartParam" >
+<Description >Location where simulation data is written</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__SinkTarget@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="ContinuousMode" Type="PartParam" >
+<Description >Run simulation in continuous mode</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 1</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__ContinuousMode@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="WindowSize" Type="PartParam" >
+<Description >Number of samples to collect and display in dynamically updated graph</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[1:inf)</Range>
+<DocSymbol />
+<HideCondition >ContinuousMode == 0</HideCondition>
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >500</DataEntry>
+<Data ><T>Double</T><D>500</D></Data></Item>
+<Item XName="DisableDataCollect" Type="PartParam" >
+<Description >Disable the collection of data</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >ContinuousMode == 0</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__DisableDataCollect@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="Graph" Type="PartParam" >
+<Description >Graph to display the data in (if empty no graph is created)</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 1 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry />
+<Data /></Item>
+<Item XName="Table" Type="PartParam" >
+<Description >Table to display the data in (if empty no table is created)</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 1 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry />
+<Data /></Item>
+<Item XName="ToSingleFile" Type="PartParam" >
+<Description >Write data from all inputs to the same file</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__ToSingleFile@Data Flow Enums</Enum>
+<DataEntry >1</DataEntry>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="DataFileName" Type="PartParam" >
+<Description >Data file name</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>10</D></Validate>
+<DataEntry >SinkData</DataEntry>
+<Data >SinkData</Data></Item>
+<Item XName="DataFileType" Type="PartParam" >
+<Description >Data file format</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__DataFileType@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="InsertFileHeader" Type="PartParam" >
+<Description >Enable inserting file header before csv file content</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || DataFileType ~= 4 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__InsertFileHeader@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="SkipFrequency" Type="PartParam" >
+<Description >Do not write characterization frequency (for complex envelope data) to file</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || DataFileType == 2 || DataFileType == 3 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__SkipFrequency@Data Flow Enums</Enum>
+<DataEntry >1</DataEntry>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="NormalizeWaveform" Type="PartParam" >
+<Description >Normalize input signal magnitude to [-1,1] range before writing to file</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || ( DataFileType ~= 2 &amp;&amp; DataFileType ~= 3 ) || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__NormalizeWaveform@Data Flow Enums</Enum>
+<DataEntry >1</DataEntry>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="ClippingLevel" Type="PartParam" >
+<Description >Clipping voltage level</Description>
+<Unit ><T>Int</T><D>9001</D></Unit>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >(0:inf)</Range>
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || ( DataFileType ~= 2 &amp;&amp; DataFileType ~= 3 ) || NormalizeWaveform == 1 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>0</D></Validate>
+<DataEntry >1.0</DataEntry>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="EquationText" Type="PartParam" >
+<Description >Equation Text to Parse, edited in the equation set</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<IsSettable ><T>Bool</T><D>0</D></IsSettable>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry />
+<Data /></Item>
+<Item XName="Interpreter" Type="PartParam" >
+<Description >MATLAB Script or retail MATLAB</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<IsSettable ><T>Bool</T><D>0</D></IsSettable>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__Interpreter@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="EquationBP" Type="PartParam" >
+<Description >Equation Breakpoints</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<IsSettable ><T>Bool</T><D>0</D></IsSettable>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>5</D></Validate>
+<DataEntry >[]</DataEntry>
+<Data ><T>Array_Dbl64</T><D>1;0;</D></Data></Item>
+<Item XName="EquationBPStates" Type="PartParam" >
+<Description >Equation Breakpoint States</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<IsSettable ><T>Bool</T><D>0</D></IsSettable>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>5</D></Validate>
+<DataEntry >[]</DataEntry>
+<Data ><T>Array_Dbl64</T><D>1;0;</D></Data></Item>
+<Item XName="Persistence" Type="PartParam" >
+<Description >Keep sink data in dataset when workspace is saved</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 1 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__Persistence@Data Flow Enums</Enum>
+<DataEntry >Data_Persistence</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="Overlap" Type="PartParam" >
+<Description >Percent overlap of data in dynamic graph</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[0:100)</Range>
+<DocSymbol />
+<HideCondition >ContinuousMode==0</HideCondition>
+<Validate ><T>Int</T><D>0</D></Validate>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item></Item>
+<Description >Data Sink</Description>
+<ParentPartName >Sink@Algorithm Design</ParentPartName>
+<SectionNum ><T>Int</T><D>0</D></SectionNum>
+<Model >Sink@Data Flow Models</Model>
+<MathLang ><T>Bool</T><D>1</D></MathLang>
+<Symbol >SYM_Sink</Symbol>
+<ShortSymbol />
+<Footprint />
+<Category >Sinks</Category>
+<Netlist >input,23?Connect19</Netlist>
+<Item XName="ModelsParamSet" Type="ModelsParamSet" >
+<Item XName="ModelSet_0" Type="ModelListEntry" >
+<ModelName >Sink@Data Flow Models</ModelName>
+<Indentifier />
+<SymbolName >SYM_Sink</SymbolName>
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="StartStopOption" Type="PartParam" >
+<Description >Sink collection mode</Description>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__StartStopOption@Data Flow Enums</Enum>
+<Data ><T>Int</T><D>1</D></Data></Item>
+<Item XName="SampleStart" Type="PartParam" >
+<Description >Sample number to start data collection</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[0:inf)</Range>
+<DocSymbol />
+<HideCondition >StartStopOption == 2</HideCondition>
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="SampleStop" Type="PartParam" >
+<Description >Sample number to stop data collection</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[SampleStart:inf)</Range>
+<DocSymbol />
+<HideCondition >StartStopOption == 2</HideCondition>
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >2 - 1</DataEntry>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="TimeStart" Type="PartParam" >
+<Description >Time to start data collection</Description>
+<Unit ><T>Int</T><D>7004</D></Unit>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[0:inf)</Range>
+<DocSymbol />
+<HideCondition >StartStopOption == 1</HideCondition>
+<Validate ><T>Int</T><D>0</D></Validate>
+<DataEntry >Start_Time</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="TimeStop" Type="PartParam" >
+<Description >Time to stop data collection</Description>
+<Unit ><T>Int</T><D>7004</D></Unit>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[TimeStart:inf)</Range>
+<DocSymbol />
+<HideCondition >StartStopOption == 1</HideCondition>
+<Validate ><T>Int</T><D>0</D></Validate>
+<DataEntry >Stop_Time</DataEntry>
+<Data ><T>Double</T><D>0.000999</D></Data></Item>
+<Item XName="SinkTarget" Type="PartParam" >
+<Description >Location where simulation data is written</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__SinkTarget@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="ContinuousMode" Type="PartParam" >
+<Description >Run simulation in continuous mode</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 1</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__ContinuousMode@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="WindowSize" Type="PartParam" >
+<Description >Number of samples to collect and display in dynamically updated graph</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[1:inf)</Range>
+<DocSymbol />
+<HideCondition >ContinuousMode == 0</HideCondition>
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >500</DataEntry>
+<Data ><T>Double</T><D>500</D></Data></Item>
+<Item XName="DisableDataCollect" Type="PartParam" >
+<Description >Disable the collection of data</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >ContinuousMode == 0</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__DisableDataCollect@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="Graph" Type="PartParam" >
+<Description >Graph to display the data in (if empty no graph is created)</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 1 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry />
+<Data /></Item>
+<Item XName="Table" Type="PartParam" >
+<Description >Table to display the data in (if empty no table is created)</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 1 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry />
+<Data /></Item>
+<Item XName="ToSingleFile" Type="PartParam" >
+<Description >Write data from all inputs to the same file</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__ToSingleFile@Data Flow Enums</Enum>
+<DataEntry >1</DataEntry>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="DataFileName" Type="PartParam" >
+<Description >Data file name</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>10</D></Validate>
+<DataEntry >SinkData</DataEntry>
+<Data >SinkData</Data></Item>
+<Item XName="DataFileType" Type="PartParam" >
+<Description >Data file format</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__DataFileType@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="InsertFileHeader" Type="PartParam" >
+<Description >Enable inserting file header before csv file content</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || DataFileType ~= 4 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__InsertFileHeader@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="SkipFrequency" Type="PartParam" >
+<Description >Do not write characterization frequency (for complex envelope data) to file</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || DataFileType == 2 || DataFileType == 3 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__SkipFrequency@Data Flow Enums</Enum>
+<DataEntry >1</DataEntry>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="NormalizeWaveform" Type="PartParam" >
+<Description >Normalize input signal magnitude to [-1,1] range before writing to file</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || ( DataFileType ~= 2 &amp;&amp; DataFileType ~= 3 ) || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__NormalizeWaveform@Data Flow Enums</Enum>
+<DataEntry >1</DataEntry>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="ClippingLevel" Type="PartParam" >
+<Description >Clipping voltage level</Description>
+<Unit ><T>Int</T><D>9001</D></Unit>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >(0:inf)</Range>
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || ( DataFileType ~= 2 &amp;&amp; DataFileType ~= 3 ) || NormalizeWaveform == 1 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>0</D></Validate>
+<DataEntry >1.0</DataEntry>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="EquationText" Type="PartParam" >
+<Description >Equation Text to Parse, edited in the equation set</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<IsSettable ><T>Bool</T><D>0</D></IsSettable>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry />
+<Data /></Item>
+<Item XName="Interpreter" Type="PartParam" >
+<Description >MATLAB Script or retail MATLAB</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<IsSettable ><T>Bool</T><D>0</D></IsSettable>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__Interpreter@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="EquationBP" Type="PartParam" >
+<Description >Equation Breakpoints</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<IsSettable ><T>Bool</T><D>0</D></IsSettable>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>5</D></Validate>
+<DataEntry >[]</DataEntry>
+<Data ><T>Array_Dbl64</T><D>1;0;</D></Data></Item>
+<Item XName="EquationBPStates" Type="PartParam" >
+<Description >Equation Breakpoint States</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<IsSettable ><T>Bool</T><D>0</D></IsSettable>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>5</D></Validate>
+<DataEntry >[]</DataEntry>
+<Data ><T>Array_Dbl64</T><D>1;0;</D></Data></Item>
+<Item XName="Persistence" Type="PartParam" >
+<Description >Keep sink data in dataset when workspace is saved</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 1 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__Persistence@Data Flow Enums</Enum>
+<DataEntry >Data_Persistence</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="Overlap" Type="PartParam" >
+<Description >Percent overlap of data in dynamic graph</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[0:100)</Range>
+<DocSymbol />
+<HideCondition >ContinuousMode==0</HideCondition>
+<Validate ><T>Int</T><D>0</D></Validate>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item></Item></Item></Item>
+<ModelID />
+<SimOverride ><T>Int</T><D>1</D></SimOverride>
+<DisabledNetlist >input,23?Connect19</DisabledNetlist></Item>
+<Item XName="L1" Type="Part" >
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry >D:\my_systemvue_work\alexnet_tools\model\conv1\</DataEntry>
+<Data >D:\my_systemvue_work\alexnet_tools\model\conv1\</Data></Item>
+<Item XName="LENGTH_OF_SIDE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >3</DataEntry>
+<Data ><T>Double</T><D>3</D></Data></Item></Item>
+<ParentPartName >layer1@alexnet_tools Parts</ParentPartName>
+<SectionNum ><T>Int</T><D>0</D></SectionNum>
+<Model >layer1@alexnet_tools Models</Model>
+<MathLang ><T>Bool</T><D>1</D></MathLang>
+<Symbol >AutoSymDF</Symbol>
+<ShortSymbol />
+<Footprint />
+<Category >alexnet_simple_conv</Category>
+<Netlist >IN_D,1?Connect0|IN_N,2?Connect1|OUT_D,5?Connect2|OUT_N,3?Connect3</Netlist>
+<Item XName="ModelsParamSet" Type="ModelsParamSet" >
+<Item XName="ModelSet_0" Type="ModelListEntry" >
+<ModelName >layer1@alexnet_tools Models</ModelName>
+<Indentifier />
+<SymbolName >AutoSymDF</SymbolName>
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry >D:\my_systemvue_work\alexnet_tools\model\conv1\</DataEntry>
+<Data >D:\my_systemvue_work\alexnet_tools\model\conv1\</Data></Item>
+<Item XName="LENGTH_OF_SIDE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >3</DataEntry>
+<Data ><T>Double</T><D>3</D></Data></Item></Item></Item></Item>
+<ModelID />
+<SimOverride ><T>Int</T><D>1</D></SimOverride>
+<DisabledNetlist >IN_D,1?Connect0|IN_N,2?Connect1|OUT_D,5?Connect2|OUT_N,3?Connect3</DisabledNetlist></Item>
+<Item XName="L4" Type="Part" >
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry >D:\my_systemvue_work\alexnet_tools\model\conv4\</DataEntry>
+<Data >D:\my_systemvue_work\alexnet_tools\model\conv4\</Data></Item>
+<Item XName="LENGTH_OF_SIDE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >3</DataEntry>
+<Data ><T>Double</T><D>3</D></Data></Item></Item>
+<ParentPartName >layer4@alexnet_tools Parts</ParentPartName>
+<SectionNum ><T>Int</T><D>0</D></SectionNum>
+<Model >layer4@alexnet_tools Models</Model>
+<MathLang ><T>Bool</T><D>1</D></MathLang>
+<Symbol >AutoSymDF</Symbol>
+<ShortSymbol />
+<Footprint />
+<Category >alexnet_simple_conv</Category>
+<Netlist >IN_D,9?Connect6|IN_N,10?Connect7|OUT_D,8?Connect8|OUT_N,7?Connect9</Netlist>
+<Item XName="ModelsParamSet" Type="ModelsParamSet" >
+<Item XName="ModelSet_0" Type="ModelListEntry" >
+<ModelName >layer4@alexnet_tools Models</ModelName>
+<Indentifier />
+<SymbolName >AutoSymDF</SymbolName>
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry >D:\my_systemvue_work\alexnet_tools\model\conv4\</DataEntry>
+<Data >D:\my_systemvue_work\alexnet_tools\model\conv4\</Data></Item>
+<Item XName="LENGTH_OF_SIDE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >3</DataEntry>
+<Data ><T>Double</T><D>3</D></Data></Item></Item></Item></Item>
+<ModelID />
+<SimOverride ><T>Int</T><D>1</D></SimOverride>
+<DisabledNetlist >IN_D,9?Connect6|IN_N,10?Connect7|OUT_D,8?Connect8|OUT_N,7?Connect9</DisabledNetlist></Item>
+<Item XName="L3" Type="Part" >
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry >D:\my_systemvue_work\alexnet_tools\model\conv3\</DataEntry>
+<Data >D:\my_systemvue_work\alexnet_tools\model\conv3\</Data></Item>
+<Item XName="LENGTH_OF_SIDE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >3</DataEntry>
+<Data ><T>Double</T><D>3</D></Data></Item></Item>
+<ParentPartName >layer3@alexnet_tools Parts</ParentPartName>
+<SectionNum ><T>Int</T><D>0</D></SectionNum>
+<Model >layer3@alexnet_tools Models</Model>
+<MathLang ><T>Bool</T><D>1</D></MathLang>
+<Symbol >AutoSymDF</Symbol>
+<ShortSymbol />
+<Footprint />
+<Category >alexnet_simple_conv</Category>
+<Netlist >IN_D,6?Connect4|IN_N,4?Connect5|OUT_D,9?Connect6|OUT_N,10?Connect7</Netlist>
+<Item XName="ModelsParamSet" Type="ModelsParamSet" >
+<Item XName="ModelSet_0" Type="ModelListEntry" >
+<ModelName >layer3@alexnet_tools Models</ModelName>
+<Indentifier />
+<SymbolName >AutoSymDF</SymbolName>
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry >D:\my_systemvue_work\alexnet_tools\model\conv3\</DataEntry>
+<Data >D:\my_systemvue_work\alexnet_tools\model\conv3\</Data></Item>
+<Item XName="LENGTH_OF_SIDE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >3</DataEntry>
+<Data ><T>Double</T><D>3</D></Data></Item></Item></Item></Item>
+<ModelID />
+<SimOverride ><T>Int</T><D>1</D></SimOverride>
+<DisabledNetlist >IN_D,6?Connect4|IN_N,4?Connect5|OUT_D,9?Connect6|OUT_N,10?Connect7</DisabledNetlist></Item>
+<Item XName="L2" Type="Part" >
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry >D:\my_systemvue_work\alexnet_tools\model\conv2\</DataEntry>
+<Data >D:\my_systemvue_work\alexnet_tools\model\conv2\</Data></Item>
+<Item XName="LENGTH_OF_SIDE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >3</DataEntry>
+<Data ><T>Double</T><D>3</D></Data></Item></Item>
+<ParentPartName >layer2@alexnet_tools Parts</ParentPartName>
+<SectionNum ><T>Int</T><D>0</D></SectionNum>
+<Model >layer2@alexnet_tools Models</Model>
+<MathLang ><T>Bool</T><D>1</D></MathLang>
+<Symbol >AutoSymDF</Symbol>
+<ShortSymbol />
+<Footprint />
+<Category >alexnet_simple_conv</Category>
+<Netlist >IN_D,5?Connect2|IN_N,3?Connect3|OUT_D,6?Connect4|OUT_N,4?Connect5</Netlist>
+<Item XName="ModelsParamSet" Type="ModelsParamSet" >
+<Item XName="ModelSet_0" Type="ModelListEntry" >
+<ModelName >layer2@alexnet_tools Models</ModelName>
+<Indentifier />
+<SymbolName >AutoSymDF</SymbolName>
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry >D:\my_systemvue_work\alexnet_tools\model\conv2\</DataEntry>
+<Data >D:\my_systemvue_work\alexnet_tools\model\conv2\</Data></Item>
+<Item XName="LENGTH_OF_SIDE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >3</DataEntry>
+<Data ><T>Double</T><D>3</D></Data></Item></Item></Item></Item>
+<ModelID />
+<SimOverride ><T>Int</T><D>1</D></SimOverride>
+<DisabledNetlist >IN_D,5?Connect2|IN_N,3?Connect3|OUT_D,6?Connect4|OUT_N,4?Connect5</DisabledNetlist></Item>
+<Item XName="L5" Type="Part" >
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry >D:\my_systemvue_work\alexnet_tools\model\conv5\</DataEntry>
+<Data >D:\my_systemvue_work\alexnet_tools\model\conv5\</Data></Item>
+<Item XName="LENGTH_OF_SIDE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >3</DataEntry>
+<Data ><T>Double</T><D>3</D></Data></Item></Item>
+<ParentPartName >layer5@alexnet_tools Parts</ParentPartName>
+<SectionNum ><T>Int</T><D>0</D></SectionNum>
+<Model >layer5@alexnet_tools Models</Model>
+<MathLang ><T>Bool</T><D>1</D></MathLang>
+<Symbol >AutoSymDF</Symbol>
+<ShortSymbol />
+<Footprint />
+<Category >alexnet_simple_conv</Category>
+<Netlist >IN_D,8?Connect8|IN_N,7?Connect9|OUT_D,12?Connect10|OUT_N,11?Connect11</Netlist>
+<Item XName="ModelsParamSet" Type="ModelsParamSet" >
+<Item XName="ModelSet_0" Type="ModelListEntry" >
+<ModelName >layer5@alexnet_tools Models</ModelName>
+<Indentifier />
+<SymbolName >AutoSymDF</SymbolName>
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry >D:\my_systemvue_work\alexnet_tools\model\conv5\</DataEntry>
+<Data >D:\my_systemvue_work\alexnet_tools\model\conv5\</Data></Item>
+<Item XName="LENGTH_OF_SIDE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >3</DataEntry>
+<Data ><T>Double</T><D>3</D></Data></Item></Item></Item></Item>
+<ModelID />
+<SimOverride ><T>Int</T><D>1</D></SimOverride>
+<DisabledNetlist >IN_D,8?Connect8|IN_N,7?Connect9|OUT_D,12?Connect10|OUT_N,11?Connect11</DisabledNetlist></Item>
+<Item XName="L6" Type="Part" >
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry >D:\my_systemvue_work\alexnet_tools\model\fc6\</DataEntry>
+<Data >D:\my_systemvue_work\alexnet_tools\model\fc6\</Data></Item></Item>
+<ParentPartName >layer6@alexnet_tools Parts</ParentPartName>
+<SectionNum ><T>Int</T><D>0</D></SectionNum>
+<Model >layer6@alexnet_tools Models</Model>
+<MathLang ><T>Bool</T><D>1</D></MathLang>
+<Symbol >AutoSymDF</Symbol>
+<ShortSymbol />
+<Footprint />
+<Category >alexnet_simple_fully_connected</Category>
+<Netlist >IN_D,12?Connect10|IN_N,11?Connect11|OUT_1,14?Connect12|OUT_N,13?Connect13</Netlist>
+<Item XName="ModelsParamSet" Type="ModelsParamSet" >
+<Item XName="ModelSet_0" Type="ModelListEntry" >
+<ModelName >layer6@alexnet_tools Models</ModelName>
+<Indentifier />
+<SymbolName >AutoSymDF</SymbolName>
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry >D:\my_systemvue_work\alexnet_tools\model\fc6\</DataEntry></Item></Item></Item></Item>
+<ModelID />
+<SimOverride ><T>Int</T><D>1</D></SimOverride>
+<DisabledNetlist >IN_D,12?Connect10|IN_N,11?Connect11|OUT_1,14?Connect12|OUT_N,13?Connect13</DisabledNetlist></Item>
+<Item XName="L7" Type="Part" >
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry >D:\my_systemvue_work\alexnet_tools\model\fc7\</DataEntry>
+<Data >D:\my_systemvue_work\alexnet_tools\model\fc7\</Data></Item></Item>
+<ParentPartName >layer7@alexnet_tools Parts</ParentPartName>
+<SectionNum ><T>Int</T><D>0</D></SectionNum>
+<Model >layer7@alexnet_tools Models</Model>
+<MathLang ><T>Bool</T><D>1</D></MathLang>
+<Symbol >AutoSymDF</Symbol>
+<ShortSymbol />
+<Footprint />
+<Category >alexnet_simple_fully_connected</Category>
+<Netlist >IN_D,14?Connect12|IN_N,13?Connect13|OUT_1,15?Connect14|OUT_N,16?Connect15</Netlist>
+<Item XName="ModelsParamSet" Type="ModelsParamSet" >
+<Item XName="ModelSet_0" Type="ModelListEntry" >
+<ModelName >layer7@alexnet_tools Models</ModelName>
+<Indentifier />
+<SymbolName >AutoSymDF</SymbolName>
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry >D:\my_systemvue_work\alexnet_tools\model\fc7\</DataEntry></Item></Item></Item></Item>
+<ModelID />
+<SimOverride ><T>Int</T><D>1</D></SimOverride>
+<DisabledNetlist >IN_D,14?Connect12|IN_N,13?Connect13|OUT_1,15?Connect14|OUT_N,16?Connect15</DisabledNetlist></Item>
+<Item XName="L8" Type="Part" >
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry >D:\my_systemvue_work\alexnet_tools\model\fc8\</DataEntry>
+<Data >D:\my_systemvue_work\alexnet_tools\model\fc8\</Data></Item></Item>
+<ParentPartName >layer8@alexnet_tools Parts</ParentPartName>
+<SectionNum ><T>Int</T><D>0</D></SectionNum>
+<Model >layer8@alexnet_tools Models</Model>
+<MathLang ><T>Bool</T><D>1</D></MathLang>
+<Symbol >AutoSymDF</Symbol>
+<ShortSymbol />
+<Footprint />
+<Category >alexnet_simple_fully_connected</Category>
+<Netlist >IN_D,15?Connect14|IN_N,16?Connect15|OUT_1,18?Connect16|OUT_N,20?Connect17</Netlist>
+<Item XName="ModelsParamSet" Type="ModelsParamSet" >
+<Item XName="ModelSet_0" Type="ModelListEntry" >
+<ModelName >layer8@alexnet_tools Models</ModelName>
+<Indentifier />
+<SymbolName >AutoSymDF</SymbolName>
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry >D:\my_systemvue_work\alexnet_tools\model\fc8\</DataEntry></Item></Item></Item></Item>
+<ModelID />
+<SimOverride ><T>Int</T><D>1</D></SimOverride>
+<DisabledNetlist >IN_D,15?Connect14|IN_N,16?Connect15|OUT_1,18?Connect16|OUT_N,20?Connect17</DisabledNetlist></Item>
+<Item XName="I1" Type="Part" >
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>10</D></Validate>
+<DataEntry >D:\my_systemvue_work\alexnet_tools\pict\1\000020.bmp</DataEntry>
+<Data >D:\my_systemvue_work\alexnet_tools\pict\1\000020.bmp</Data></Item></Item>
+<ParentPartName >in@alexnet_tools Parts</ParentPartName>
+<SectionNum ><T>Int</T><D>0</D></SectionNum>
+<Model >in@alexnet_tools Models</Model>
+<MathLang ><T>Bool</T><D>1</D></MathLang>
+<Symbol >AutoSymDF</Symbol>
+<ShortSymbol />
+<Footprint />
+<Category >in</Category>
+<Netlist >OUT_D,1?Connect0|OUT_N,2?Connect1</Netlist>
+<Item XName="ModelsParamSet" Type="ModelsParamSet" >
+<Item XName="ModelSet_0" Type="ModelListEntry" >
+<ModelName >in@alexnet_tools Models</ModelName>
+<Indentifier />
+<SymbolName >AutoSymDF</SymbolName>
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>10</D></Validate>
+<DataEntry >D:\my_systemvue_work\alexnet_tools\pict\1\000020.bmp</DataEntry></Item></Item></Item></Item>
+<ModelID />
+<SimOverride ><T>Int</T><D>1</D></SimOverride>
+<DisabledNetlist >OUT_D,1?Connect0|OUT_N,2?Connect1</DisabledNetlist></Item>
+<Item XName="D2" Type="Part" >
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="Format" Type="PartParam" >
+<Description >Format of data to be packed into matrix</Description>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >DynamicUnpack_M__Format@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item></Item>
+<Description >Unpack variable-size matrices into samples</Description>
+<ParentPartName >DynamicUnpack_M@Algorithm Design</ParentPartName>
+<SectionNum ><T>Int</T><D>0</D></SectionNum>
+<Model >DynamicUnpack_M@Data Flow Models</Model>
+<MathLang ><T>Bool</T><D>1</D></MathLang>
+<Symbol >SYM_DynamicUnpack_M</Symbol>
+<ShortSymbol />
+<Footprint />
+<Category >Dynamic;Math Matrix;Type Converters</Category>
+<Netlist >input,26?Connect24|output,30?Connect25|numRows,32|numColumns,33</Netlist></Item>
+<Item XName="S3" Type="Part" >
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="StartStopOption" Type="PartParam" >
+<Description >Sink collection mode</Description>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__StartStopOption@Data Flow Enums</Enum>
+<Data ><T>Int</T><D>1</D></Data></Item>
+<Item XName="SampleStart" Type="PartParam" >
+<Description >Sample number to start data collection</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[0:inf)</Range>
+<DocSymbol />
+<HideCondition >StartStopOption == 2</HideCondition>
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="SampleStop" Type="PartParam" >
+<Description >Sample number to stop data collection</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[SampleStart:inf)</Range>
+<DocSymbol />
+<HideCondition >StartStopOption == 2</HideCondition>
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >2 - 1</DataEntry>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="TimeStart" Type="PartParam" >
+<Description >Time to start data collection</Description>
+<Unit ><T>Int</T><D>7004</D></Unit>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[0:inf)</Range>
+<DocSymbol />
+<HideCondition >StartStopOption == 1</HideCondition>
+<Validate ><T>Int</T><D>0</D></Validate>
+<DataEntry >Start_Time</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="TimeStop" Type="PartParam" >
+<Description >Time to stop data collection</Description>
+<Unit ><T>Int</T><D>7004</D></Unit>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[TimeStart:inf)</Range>
+<DocSymbol />
+<HideCondition >StartStopOption == 1</HideCondition>
+<Validate ><T>Int</T><D>0</D></Validate>
+<DataEntry >Stop_Time</DataEntry>
+<Data ><T>Double</T><D>0.000999</D></Data></Item>
+<Item XName="SinkTarget" Type="PartParam" >
+<Description >Location where simulation data is written</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__SinkTarget@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="ContinuousMode" Type="PartParam" >
+<Description >Run simulation in continuous mode</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 1</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__ContinuousMode@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="WindowSize" Type="PartParam" >
+<Description >Number of samples to collect and display in dynamically updated graph</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[1:inf)</Range>
+<DocSymbol />
+<HideCondition >ContinuousMode == 0</HideCondition>
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >500</DataEntry>
+<Data ><T>Double</T><D>500</D></Data></Item>
+<Item XName="DisableDataCollect" Type="PartParam" >
+<Description >Disable the collection of data</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >ContinuousMode == 0</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__DisableDataCollect@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="Graph" Type="PartParam" >
+<Description >Graph to display the data in (if empty no graph is created)</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 1 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry />
+<Data /></Item>
+<Item XName="Table" Type="PartParam" >
+<Description >Table to display the data in (if empty no table is created)</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 1 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry />
+<Data /></Item>
+<Item XName="ToSingleFile" Type="PartParam" >
+<Description >Write data from all inputs to the same file</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__ToSingleFile@Data Flow Enums</Enum>
+<DataEntry >1</DataEntry>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="DataFileName" Type="PartParam" >
+<Description >Data file name</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>10</D></Validate>
+<DataEntry >SinkData</DataEntry>
+<Data >SinkData</Data></Item>
+<Item XName="DataFileType" Type="PartParam" >
+<Description >Data file format</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__DataFileType@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="InsertFileHeader" Type="PartParam" >
+<Description >Enable inserting file header before csv file content</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || DataFileType ~= 4 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__InsertFileHeader@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="SkipFrequency" Type="PartParam" >
+<Description >Do not write characterization frequency (for complex envelope data) to file</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || DataFileType == 2 || DataFileType == 3 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__SkipFrequency@Data Flow Enums</Enum>
+<DataEntry >1</DataEntry>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="NormalizeWaveform" Type="PartParam" >
+<Description >Normalize input signal magnitude to [-1,1] range before writing to file</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || ( DataFileType ~= 2 &amp;&amp; DataFileType ~= 3 ) || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__NormalizeWaveform@Data Flow Enums</Enum>
+<DataEntry >1</DataEntry>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="ClippingLevel" Type="PartParam" >
+<Description >Clipping voltage level</Description>
+<Unit ><T>Int</T><D>9001</D></Unit>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >(0:inf)</Range>
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || ( DataFileType ~= 2 &amp;&amp; DataFileType ~= 3 ) || NormalizeWaveform == 1 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>0</D></Validate>
+<DataEntry >1.0</DataEntry>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="EquationText" Type="PartParam" >
+<Description >Equation Text to Parse, edited in the equation set</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<IsSettable ><T>Bool</T><D>0</D></IsSettable>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry />
+<Data /></Item>
+<Item XName="Interpreter" Type="PartParam" >
+<Description >MATLAB Script or retail MATLAB</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<IsSettable ><T>Bool</T><D>0</D></IsSettable>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__Interpreter@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="EquationBP" Type="PartParam" >
+<Description >Equation Breakpoints</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<IsSettable ><T>Bool</T><D>0</D></IsSettable>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>5</D></Validate>
+<DataEntry >[]</DataEntry>
+<Data ><T>Array_Dbl64</T><D>1;0;</D></Data></Item>
+<Item XName="EquationBPStates" Type="PartParam" >
+<Description >Equation Breakpoint States</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<IsSettable ><T>Bool</T><D>0</D></IsSettable>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>5</D></Validate>
+<DataEntry >[]</DataEntry>
+<Data ><T>Array_Dbl64</T><D>1;0;</D></Data></Item>
+<Item XName="Persistence" Type="PartParam" >
+<Description >Keep sink data in dataset when workspace is saved</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 1 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__Persistence@Data Flow Enums</Enum>
+<DataEntry >Data_Persistence</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="Overlap" Type="PartParam" >
+<Description >Percent overlap of data in dynamic graph</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[0:100)</Range>
+<DocSymbol />
+<HideCondition >ContinuousMode==0</HideCondition>
+<Validate ><T>Int</T><D>0</D></Validate>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item></Item>
+<Description >Data Sink</Description>
+<ParentPartName >Sink@Algorithm Design</ParentPartName>
+<SectionNum ><T>Int</T><D>0</D></SectionNum>
+<Model >Sink@Data Flow Models</Model>
+<MathLang ><T>Bool</T><D>1</D></MathLang>
+<Symbol >SYM_Sink</Symbol>
+<ShortSymbol />
+<Footprint />
+<Category >Sinks</Category>
+<Netlist >input,30?Connect25</Netlist>
+<Item XName="ModelsParamSet" Type="ModelsParamSet" >
+<Item XName="ModelSet_0" Type="ModelListEntry" >
+<ModelName >Sink@Data Flow Models</ModelName>
+<Indentifier />
+<SymbolName >SYM_Sink</SymbolName>
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="StartStopOption" Type="PartParam" >
+<Description >Sink collection mode</Description>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__StartStopOption@Data Flow Enums</Enum>
+<Data ><T>Int</T><D>1</D></Data></Item>
+<Item XName="SampleStart" Type="PartParam" >
+<Description >Sample number to start data collection</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[0:inf)</Range>
+<DocSymbol />
+<HideCondition >StartStopOption == 2</HideCondition>
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="SampleStop" Type="PartParam" >
+<Description >Sample number to stop data collection</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[SampleStart:inf)</Range>
+<DocSymbol />
+<HideCondition >StartStopOption == 2</HideCondition>
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >2 - 1</DataEntry>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="TimeStart" Type="PartParam" >
+<Description >Time to start data collection</Description>
+<Unit ><T>Int</T><D>7004</D></Unit>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[0:inf)</Range>
+<DocSymbol />
+<HideCondition >StartStopOption == 1</HideCondition>
+<Validate ><T>Int</T><D>0</D></Validate>
+<DataEntry >Start_Time</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="TimeStop" Type="PartParam" >
+<Description >Time to stop data collection</Description>
+<Unit ><T>Int</T><D>7004</D></Unit>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[TimeStart:inf)</Range>
+<DocSymbol />
+<HideCondition >StartStopOption == 1</HideCondition>
+<Validate ><T>Int</T><D>0</D></Validate>
+<DataEntry >Stop_Time</DataEntry>
+<Data ><T>Double</T><D>0.000999</D></Data></Item>
+<Item XName="SinkTarget" Type="PartParam" >
+<Description >Location where simulation data is written</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__SinkTarget@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="ContinuousMode" Type="PartParam" >
+<Description >Run simulation in continuous mode</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 1</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__ContinuousMode@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="WindowSize" Type="PartParam" >
+<Description >Number of samples to collect and display in dynamically updated graph</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[1:inf)</Range>
+<DocSymbol />
+<HideCondition >ContinuousMode == 0</HideCondition>
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >500</DataEntry>
+<Data ><T>Double</T><D>500</D></Data></Item>
+<Item XName="DisableDataCollect" Type="PartParam" >
+<Description >Disable the collection of data</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >ContinuousMode == 0</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__DisableDataCollect@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="Graph" Type="PartParam" >
+<Description >Graph to display the data in (if empty no graph is created)</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 1 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry />
+<Data /></Item>
+<Item XName="Table" Type="PartParam" >
+<Description >Table to display the data in (if empty no table is created)</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 1 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry />
+<Data /></Item>
+<Item XName="ToSingleFile" Type="PartParam" >
+<Description >Write data from all inputs to the same file</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__ToSingleFile@Data Flow Enums</Enum>
+<DataEntry >1</DataEntry>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="DataFileName" Type="PartParam" >
+<Description >Data file name</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>10</D></Validate>
+<DataEntry >SinkData</DataEntry>
+<Data >SinkData</Data></Item>
+<Item XName="DataFileType" Type="PartParam" >
+<Description >Data file format</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__DataFileType@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="InsertFileHeader" Type="PartParam" >
+<Description >Enable inserting file header before csv file content</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || DataFileType ~= 4 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__InsertFileHeader@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="SkipFrequency" Type="PartParam" >
+<Description >Do not write characterization frequency (for complex envelope data) to file</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || DataFileType == 2 || DataFileType == 3 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__SkipFrequency@Data Flow Enums</Enum>
+<DataEntry >1</DataEntry>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="NormalizeWaveform" Type="PartParam" >
+<Description >Normalize input signal magnitude to [-1,1] range before writing to file</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || ( DataFileType ~= 2 &amp;&amp; DataFileType ~= 3 ) || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__NormalizeWaveform@Data Flow Enums</Enum>
+<DataEntry >1</DataEntry>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="ClippingLevel" Type="PartParam" >
+<Description >Clipping voltage level</Description>
+<Unit ><T>Int</T><D>9001</D></Unit>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >(0:inf)</Range>
+<DocSymbol />
+<HideCondition >SinkTarget == 0 || ( DataFileType ~= 2 &amp;&amp; DataFileType ~= 3 ) || NormalizeWaveform == 1 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>0</D></Validate>
+<DataEntry >1.0</DataEntry>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="EquationText" Type="PartParam" >
+<Description >Equation Text to Parse, edited in the equation set</Description>
+<Default ><T>Bool</T><D>1</D></Default>
+<Show ><T>Bool</T><D>0</D></Show>
+<IsSettable ><T>Bool</T><D>0</D></IsSettable>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry />
+<Data /></Item>
+<Item XName="Interpreter" Type="PartParam" >
+<Description >MATLAB Script or retail MATLAB</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<IsSettable ><T>Bool</T><D>0</D></IsSettable>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__Interpreter@Data Flow Enums</Enum>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="EquationBP" Type="PartParam" >
+<Description >Equation Breakpoints</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<IsSettable ><T>Bool</T><D>0</D></IsSettable>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>5</D></Validate>
+<DataEntry >[]</DataEntry>
+<Data ><T>Array_Dbl64</T><D>1;0;</D></Data></Item>
+<Item XName="EquationBPStates" Type="PartParam" >
+<Description >Equation Breakpoint States</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<IsSettable ><T>Bool</T><D>0</D></IsSettable>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>5</D></Validate>
+<DataEntry >[]</DataEntry>
+<Data ><T>Array_Dbl64</T><D>1;0;</D></Data></Item>
+<Item XName="Persistence" Type="PartParam" >
+<Description >Keep sink data in dataset when workspace is saved</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<HideCondition >SinkTarget == 1 || (ContinuousMode==1 &amp;&amp; DisableDataCollect==1)</HideCondition>
+<Validate ><T>Int</T><D>16</D></Validate>
+<Enum >Sink__Persistence@Data Flow Enums</Enum>
+<DataEntry >Data_Persistence</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="Overlap" Type="PartParam" >
+<Description >Percent overlap of data in dynamic graph</Description>
+<Show ><T>Bool</T><D>0</D></Show>
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range >[0:100)</Range>
+<DocSymbol />
+<HideCondition >ContinuousMode==0</HideCondition>
+<Validate ><T>Int</T><D>0</D></Validate>
+<DataEntry >0</DataEntry>
+<Data ><T>Double</T><D>0</D></Data></Item></Item></Item></Item>
+<ModelID /></Item>
+<Item XName="I2" Type="Part" >
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>10</D></Validate>
+<DataEntry >D:\my_systemvue_work\alexnet_tools\pict\flower.bmp</DataEntry>
+<Data >D:\my_systemvue_work\alexnet_tools\pict\flower.bmp</Data></Item></Item>
+<ParentPartName >in@alexnet_tools Parts</ParentPartName>
+<SectionNum ><T>Int</T><D>0</D></SectionNum>
+<Model >in@alexnet_tools Models</Model>
+<MathLang ><T>Bool</T><D>1</D></MathLang>
+<Symbol >AutoSymDF</Symbol>
+<ShortSymbol />
+<Footprint />
+<Category >in</Category>
+<Netlist >OUT_D,24?Connect20|OUT_N,25?Connect21</Netlist>
+<Item XName="ModelsParamSet" Type="ModelsParamSet" >
+<Item XName="ModelSet_0" Type="ModelListEntry" >
+<ModelName >in@alexnet_tools Models</ModelName>
+<Indentifier />
+<SymbolName >AutoSymDF</SymbolName>
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>10</D></Validate>
+<DataEntry >D:\my_systemvue_work\alexnet_tools\pict\flower.bmp</DataEntry></Item></Item></Item></Item>
+<ModelID /></Item>
+<Item XName="T1" Type="Part" >
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry >C:\Users\UCAS\Desktop\model_ways\model\conv1_11x11x3x3+3\</DataEntry>
+<Data >C:\Users\UCAS\Desktop\model_ways\model\conv1_11x11x3x3+3\</Data></Item>
+<Item XName="LENGTH_OF_SIDE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >11</DataEntry>
+<Data ><T>Double</T><D>11</D></Data></Item></Item>
+<ParentPartName >test_conv@alexnet_tools Parts</ParentPartName>
+<SectionNum ><T>Int</T><D>0</D></SectionNum>
+<Model >test_conv@alexnet_tools Models</Model>
+<MathLang ><T>Bool</T><D>1</D></MathLang>
+<Symbol >AutoSymDF</Symbol>
+<ShortSymbol />
+<Footprint />
+<Category >alexnet_simple_conv</Category>
+<Netlist >IN_D,24?Connect20|IN_N,25?Connect21|OUT_D,28?Connect22|OUT_N,27?Connect23</Netlist>
+<Item XName="ModelsParamSet" Type="ModelsParamSet" >
+<Item XName="ModelSet_0" Type="ModelListEntry" >
+<ModelName >test_conv@alexnet_tools Models</ModelName>
+<Indentifier />
+<SymbolName >AutoSymDF</SymbolName>
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry >C:\Users\UCAS\Desktop\model_ways\model\conv1_11x11x3x3+3\</DataEntry>
+<Data >C:\Users\UCAS\Desktop\model_ways\model\conv1_11x11x3x3+3\</Data></Item>
+<Item XName="LENGTH_OF_SIDE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>11</D></Validate>
+<DataEntry >11</DataEntry>
+<Data ><T>Double</T><D>11</D></Data></Item></Item></Item></Item>
+<ModelID /></Item>
+<Item XName="T2" Type="Part" >
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry >C:\Users\UCAS\Desktop\model_ways\model\fc1_(114_114)x2+2\</DataEntry>
+<Data >C:\Users\UCAS\Desktop\model_ways\model\fc1_(114_114)x2+2\</Data></Item></Item>
+<ParentPartName >test_fc@alexnet_tools Parts</ParentPartName>
+<SectionNum ><T>Int</T><D>0</D></SectionNum>
+<Model >test_fc@alexnet_tools Models</Model>
+<MathLang ><T>Bool</T><D>1</D></MathLang>
+<Symbol >AutoSymDF</Symbol>
+<ShortSymbol />
+<Footprint />
+<Category >alexnet_simple_fully_connected</Category>
+<Netlist >IN_D,28?Connect22|IN_N,27?Connect23|OUT_1,26?Connect24|OUT_N,29</Netlist>
+<Item XName="ModelsParamSet" Type="ModelsParamSet" >
+<Item XName="ModelSet_0" Type="ModelListEntry" >
+<ModelName >test_fc@alexnet_tools Models</ModelName>
+<Indentifier />
+<SymbolName >AutoSymDF</SymbolName>
+<Item XName="ParamSet" Type="ParamSet" >
+<Item XName="INPUT_FILE" Type="PartParam" >
+<RunTimeTunable ><T>Bool</T><D>0</D></RunTimeTunable>
+<Range />
+<DocSymbol />
+<Validate ><T>Int</T><D>4</D></Validate>
+<DataEntry >C:\Users\UCAS\Desktop\model_ways\model\fc1_(114_114)x2+2\</DataEntry></Item></Item></Item></Item>
+<ModelID /></Item></Item>
+<Item XName="Schematic" Type="CSchematic" >
+<Item XName="SnapGrid" Type="Param" >
+<Data ><T>Double</T><D>125</D></Data>
+<Unit ><T>Int</T><D>0</D></Unit></Item>
+<Item XName="Page" Type="PageMgr" >
+<Item XName="PageBox" Type="PageBox" >
+<Color ><T>Int</T><D>128</D></Color>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Width ><T>Double</T><D>10999</D></Width>
+<Height ><T>Double</T><D>7999</D></Height>
+<Alpha ><T>Int</T><D>32</D></Alpha>
+<Visible ><T>Bool</T><D>0</D></Visible></Item>
+<Item XName="Font" Type="Font" >
+<Size ><T>Double</T><D>111.11111111111111</D></Size>
+<Name >Arial</Name>
+<Color ><T>Int</T><D>0</D></Color>
+<Weight ><T>Int</T><D>400</D></Weight>
+<Italic ><T>Int</T><D>0</D></Italic>
+<Angle ><T>Int</T><D>0</D></Angle></Item>
+<Item XName="Display0" Type="SchematicDisp" >
+<PVPort ><T>Array_Dbl64</T><D>1;4;HKNG7D7jq2C;OO24;2HoEdoSHk24;{1cSrJK5l24</D></PVPort>
+<DVport ><T>Array_Dbl64</T><D>1;4;;;gG24;an14</D></DVport>
+<Show ><T>Bool</T><D>0</D></Show></Item>
+<Item XName="Display1" Type="SchematicDisp" >
+<PVPort ><T>Array_Dbl64</T><D>1;4;QcPcPcvBH2C;qCpCpCp}82C;pCpCpCNe734;hkh05wvxk24</D></PVPort>
+<DVport ><T>Array_Dbl64</T><D>1;4;;;MA24;p14</D></DVport>
+<Show ><T>Bool</T><D>0</D></Show></Item>
+<Item XName="Connect2" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;R724;Rt14;GF24;Rt14</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight>
+<IsABus ><T>Bool</T><D>0</D></IsABus></Item>
+<Item XName="Connect3" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;R724;GV14;GF24;GV14</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight>
+<IsABus ><T>Bool</T><D>0</D></IsABus></Item>
+<Item XName="Connect4" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;Vb24;Rt14;Rd24;Rt14</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight>
+<IsABus ><T>Bool</T><D>0</D></IsABus></Item>
+<Item XName="Connect5" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;Vb24;GV14;Rd24;GV14</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight>
+<IsABus ><T>Bool</T><D>0</D></IsABus></Item>
+<Item XName="Connect6" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;WZo24;Rt14;Yp24;Rt14</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight>
+<IsABus ><T>Bool</T><D>0</D></IsABus></Item>
+<Item XName="Connect7" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;WZo24;GV14;Yp24;GV14</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight>
+<IsABus ><T>Bool</T><D>0</D></IsABus></Item>
+<Item XName="Connect8" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;WNw24;Rt14;Mx24;Rt14</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight>
+<IsABus ><T>Bool</T><D>0</D></IsABus></Item>
+<Item XName="Connect9" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;WNw24;GV14;Mx24;GV14</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight>
+<IsABus ><T>Bool</T><D>0</D></IsABus></Item>
+<Item XName="Connect10" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;m5134;Rt14;eq134;Rt14</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight>
+<IsABus ><T>Bool</T><D>0</D></IsABus></Item>
+<Item XName="Connect11" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;m5134;GV14;eq134;GV14</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight>
+<IsABus ><T>Bool</T><D>0</D></IsABus></Item>
+<Item XName="Connect12" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;OF534;Rt14;ek534;Rt14</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight>
+<IsABus ><T>Bool</T><D>0</D></IsABus></Item>
+<Item XName="Connect13" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;OF534;GV14;ek534;GV14</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight>
+<IsABus ><T>Bool</T><D>0</D></IsABus></Item>
+<Item XName="Connect14" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;O9934;Rt14;ee934;Rt14</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight>
+<IsABus ><T>Bool</T><D>0</D></IsABus></Item>
+<Item XName="Connect15" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;O9934;GV14;ee934;GV14</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight>
+<IsABus ><T>Bool</T><D>0</D></IsABus></Item>
+<Item XName="Part10" Type="SchPart" >
+<Designator >D1</Designator>
+<PosX ><T>Double</T><D>17124</D></PosX>
+<PosY ><T>Double</T><D>375</D></PosY>
+<Symbol >SYM_DynamicUnpack_M</Symbol>
+<CenterX ><T>Double</T><D>0</D></CenterX>
+<CenterY ><T>Double</T><D>0</D></CenterY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Item XName="DrawParams" Type="DrawGroup" >
+<ZOrder ><T>Int</T><D>1</D></ZOrder>
+<Visible ><T>Bool</T><D>1</D></Visible>
+<PosX ><T>Double</T><D>862.75</D></PosX>
+<PosY ><T>Double</T><D>310.625</D></PosY>
+<Item XName="__pD1" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>0</D></FontColor>
+<Text >D1 {DynamicUnpack_M@Data Flow Models}</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="Override" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>8388736</D></FontColor>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<Text >Disabled: OPEN</Text>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>137.64666666666668</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pFormat" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11184810</D></FontColor>
+<Text >Format=ColumnMajor</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>275.29333333333335</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item></Item></Item>
+<Item XName="Connect19" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;eSI34;Rt14;8pI34;Rt14</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight>
+<IsABus ><T>Bool</T><D>0</D></IsABus></Item>
+<Item XName="Part11" Type="SchPart" >
+<Designator >S2</Designator>
+<PosX ><T>Double</T><D>19249</D></PosX>
+<PosY ><T>Double</T><D>375</D></PosY>
+<Symbol >SYM_Sink</Symbol>
+<CenterX ><T>Double</T><D>0</D></CenterX>
+<CenterY ><T>Double</T><D>0</D></CenterY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Description >Data Sink</Description>
+<Item XName="DrawParams" Type="DrawGroup" >
+<ZOrder ><T>Int</T><D>1</D></ZOrder>
+<Visible ><T>Bool</T><D>1</D></Visible>
+<PosX ><T>Double</T><D>596</D></PosX>
+<PosY ><T>Double</T><D>232.5</D></PosY>
+<Item XName="__pS2" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>0</D></FontColor>
+<Text >S2 {Sink@Data Flow Models}</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="Override" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>8388736</D></FontColor>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<Text >Disabled: OPEN</Text>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>137.64666666666668</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pStartStopOption" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11184810</D></FontColor>
+<Text >StartStopOption=Samples</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>275.29333333333335</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item></Item></Item>
+<Item XName="Part1" Type="SchPart" >
+<Designator >L1</Designator>
+<PosX ><T>Double</T><D>-1250</D></PosX>
+<PosY ><T>Double</T><D>-375</D></PosY>
+<Symbol >AutoSymDF</Symbol>
+<CenterX ><T>Double</T><D>250</D></CenterX>
+<CenterY ><T>Double</T><D>250</D></CenterY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Item XName="DrawParams" Type="DrawGroup" >
+<ZOrder ><T>Int</T><D>1</D></ZOrder>
+<Visible ><T>Bool</T><D>1</D></Visible>
+<PosX ><T>Double</T><D>1125</D></PosX>
+<PosY ><T>Double</T><D>1045</D></PosY>
+<Item XName="__pL1" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>0</D></FontColor>
+<Text >L1 {layer1@alexnet_tools Models}</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="Override" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>8388736</D></FontColor>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<Text >Disabled: OPEN</Text>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>137.64666666666668</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pINPUT_FILE" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11184810</D></FontColor>
+<Text >INPUT_FILE=D:\my_systemvue_work\alexnet_tools\model\conv1\</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>275.29333333333335</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pLENGTH_OF_SIDE" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11184810</D></FontColor>
+<Text >LENGTH_OF_SIDE=3</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>412.94000000000005</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item></Item></Item>
+<Item XName="Part4" Type="SchPart" >
+<Designator >L4</Designator>
+<PosX ><T>Double</T><D>4749.9999999999991</D></PosX>
+<PosY ><T>Double</T><D>-375</D></PosY>
+<Symbol >AutoSymDF</Symbol>
+<CenterX ><T>Double</T><D>250</D></CenterX>
+<CenterY ><T>Double</T><D>250</D></CenterY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Item XName="DrawParams" Type="DrawGroup" >
+<ZOrder ><T>Int</T><D>1</D></ZOrder>
+<Visible ><T>Bool</T><D>1</D></Visible>
+<PosX ><T>Double</T><D>1125</D></PosX>
+<PosY ><T>Double</T><D>1045</D></PosY>
+<Item XName="__pL4" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>0</D></FontColor>
+<Text >L4 {layer4@alexnet_tools Models}</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="Override" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>8388736</D></FontColor>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<Text >Disabled: OPEN</Text>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>137.64666666666668</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pINPUT_FILE" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11184810</D></FontColor>
+<Text >INPUT_FILE=D:\my_systemvue_work\alexnet_tools\model\conv4\</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>275.29333333333335</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pLENGTH_OF_SIDE" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11184810</D></FontColor>
+<Text >LENGTH_OF_SIDE=3</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>412.94000000000005</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item></Item></Item>
+<Item XName="Part3" Type="SchPart" >
+<Designator >L3</Designator>
+<PosX ><T>Double</T><D>2750.0000000000032</D></PosX>
+<PosY ><T>Double</T><D>-375</D></PosY>
+<Symbol >AutoSymDF</Symbol>
+<CenterX ><T>Double</T><D>250</D></CenterX>
+<CenterY ><T>Double</T><D>250</D></CenterY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Item XName="DrawParams" Type="DrawGroup" >
+<ZOrder ><T>Int</T><D>1</D></ZOrder>
+<Visible ><T>Bool</T><D>1</D></Visible>
+<PosX ><T>Double</T><D>1125</D></PosX>
+<PosY ><T>Double</T><D>1045</D></PosY>
+<Item XName="__pL3" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>0</D></FontColor>
+<Text >L3 {layer3@alexnet_tools Models}</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="Override" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>8388736</D></FontColor>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<Text >Disabled: OPEN</Text>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>137.64666666666668</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pINPUT_FILE" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11184810</D></FontColor>
+<Text >INPUT_FILE=D:\my_systemvue_work\alexnet_tools\model\conv3\</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>275.29333333333335</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pLENGTH_OF_SIDE" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11184810</D></FontColor>
+<Text >LENGTH_OF_SIDE=3</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>412.94000000000005</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item></Item></Item>
+<Item XName="Part2" Type="SchPart" >
+<Designator >L2</Designator>
+<PosX ><T>Double</T><D>749.99999999999955</D></PosX>
+<PosY ><T>Double</T><D>-375</D></PosY>
+<Symbol >AutoSymDF</Symbol>
+<CenterX ><T>Double</T><D>250</D></CenterX>
+<CenterY ><T>Double</T><D>250</D></CenterY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Item XName="DrawParams" Type="DrawGroup" >
+<ZOrder ><T>Int</T><D>1</D></ZOrder>
+<Visible ><T>Bool</T><D>1</D></Visible>
+<PosX ><T>Double</T><D>1125</D></PosX>
+<PosY ><T>Double</T><D>1045</D></PosY>
+<Item XName="__pL2" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>0</D></FontColor>
+<Text >L2 {layer2@alexnet_tools Models}</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="Override" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>8388736</D></FontColor>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<Text >Disabled: OPEN</Text>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>137.64666666666668</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pINPUT_FILE" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11184810</D></FontColor>
+<Text >INPUT_FILE=D:\my_systemvue_work\alexnet_tools\model\conv2\</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>275.29333333333335</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pLENGTH_OF_SIDE" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11184810</D></FontColor>
+<Text >LENGTH_OF_SIDE=3</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>412.94000000000005</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item></Item></Item>
+<Item XName="Part5" Type="SchPart" >
+<Designator >L5</Designator>
+<PosX ><T>Double</T><D>6750.0000000000118</D></PosX>
+<PosY ><T>Double</T><D>-375</D></PosY>
+<Symbol >AutoSymDF</Symbol>
+<CenterX ><T>Double</T><D>250</D></CenterX>
+<CenterY ><T>Double</T><D>250</D></CenterY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Item XName="DrawParams" Type="DrawGroup" >
+<ZOrder ><T>Int</T><D>1</D></ZOrder>
+<Visible ><T>Bool</T><D>1</D></Visible>
+<PosX ><T>Double</T><D>1125</D></PosX>
+<PosY ><T>Double</T><D>1045</D></PosY>
+<Item XName="__pL5" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>0</D></FontColor>
+<Text >L5 {layer5@alexnet_tools Models}</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="Override" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>8388736</D></FontColor>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<Text >Disabled: OPEN</Text>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>137.64666666666668</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pINPUT_FILE" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11184810</D></FontColor>
+<Text >INPUT_FILE=D:\my_systemvue_work\alexnet_tools\model\conv5\</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>275.29333333333335</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pLENGTH_OF_SIDE" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11184810</D></FontColor>
+<Text >LENGTH_OF_SIDE=3</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>412.94000000000005</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item></Item></Item>
+<Item XName="Part6" Type="SchPart" >
+<Designator >L6</Designator>
+<PosX ><T>Double</T><D>8875.0000000000182</D></PosX>
+<PosY ><T>Double</T><D>-375</D></PosY>
+<Symbol >AutoSymDF</Symbol>
+<CenterX ><T>Double</T><D>250</D></CenterX>
+<CenterY ><T>Double</T><D>250</D></CenterY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Item XName="DrawParams" Type="DrawGroup" >
+<ZOrder ><T>Int</T><D>1</D></ZOrder>
+<Visible ><T>Bool</T><D>1</D></Visible>
+<PosX ><T>Double</T><D>1125</D></PosX>
+<PosY ><T>Double</T><D>1045</D></PosY>
+<Item XName="__pL6" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>0</D></FontColor>
+<Text >L6 {layer6@alexnet_tools Models}</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="Override" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>8388736</D></FontColor>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<Text >Disabled: OPEN</Text>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>137.64666666666668</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pINPUT_FILE" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11184810</D></FontColor>
+<Text >INPUT_FILE=D:\my_systemvue_work\alexnet_tools\model\fc6\</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>275.29333333333335</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item></Item></Item>
+<Item XName="Part7" Type="SchPart" >
+<Designator >L7</Designator>
+<PosX ><T>Double</T><D>10874.999999999964</D></PosX>
+<PosY ><T>Double</T><D>-375</D></PosY>
+<Symbol >AutoSymDF</Symbol>
+<CenterX ><T>Double</T><D>250</D></CenterX>
+<CenterY ><T>Double</T><D>250</D></CenterY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Item XName="DrawParams" Type="DrawGroup" >
+<ZOrder ><T>Int</T><D>1</D></ZOrder>
+<Visible ><T>Bool</T><D>1</D></Visible>
+<PosX ><T>Double</T><D>1125</D></PosX>
+<PosY ><T>Double</T><D>1045</D></PosY>
+<Item XName="__pL7" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>0</D></FontColor>
+<Text >L7 {layer7@alexnet_tools Models}</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="Override" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>8388736</D></FontColor>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<Text >Disabled: OPEN</Text>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>137.64666666666668</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pINPUT_FILE" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11184810</D></FontColor>
+<Text >INPUT_FILE=D:\my_systemvue_work\alexnet_tools\model\fc7\</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>275.29333333333335</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item></Item></Item>
+<Item XName="Part8" Type="SchPart" >
+<Designator >L8</Designator>
+<PosX ><T>Double</T><D>12874.999999999978</D></PosX>
+<PosY ><T>Double</T><D>-375</D></PosY>
+<Symbol >AutoSymDF</Symbol>
+<CenterX ><T>Double</T><D>250</D></CenterX>
+<CenterY ><T>Double</T><D>250</D></CenterY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Item XName="DrawParams" Type="DrawGroup" >
+<ZOrder ><T>Int</T><D>1</D></ZOrder>
+<Visible ><T>Bool</T><D>1</D></Visible>
+<PosX ><T>Double</T><D>1125</D></PosX>
+<PosY ><T>Double</T><D>1045</D></PosY>
+<Item XName="__pL8" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>0</D></FontColor>
+<Text >L8 {layer8@alexnet_tools Models}</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="Override" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>8388736</D></FontColor>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<Text >Disabled: OPEN</Text>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>137.64666666666668</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pINPUT_FILE" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11184810</D></FontColor>
+<Text >INPUT_FILE=D:\my_systemvue_work\alexnet_tools\model\fc8\</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>275.29333333333335</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item></Item></Item>
+<Item XName="Part9" Type="SchPart" >
+<Designator >S1</Designator>
+<PosX ><T>Double</T><D>14875</D></PosX>
+<PosY ><T>Double</T><D>-375</D></PosY>
+<Symbol >AutoSymDF</Symbol>
+<CenterX ><T>Double</T><D>250</D></CenterX>
+<CenterY ><T>Double</T><D>250</D></CenterY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Item XName="DrawParams" Type="DrawGroup" >
+<ZOrder ><T>Int</T><D>1</D></ZOrder>
+<Visible ><T>Bool</T><D>1</D></Visible>
+<PosX ><T>Double</T><D>1149.9716796875</D></PosX>
+<PosY ><T>Double</T><D>1045</D></PosY>
+<Item XName="__pS1" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>0</D></FontColor>
+<Text >S1 {softmax@alexnet_tools Models}</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="Override" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>8388736</D></FontColor>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<Text >Disabled: OPEN</Text>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>137.64666666666668</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item></Item></Item>
+<Item XName="Connect16" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;O3D34;Rt14;eYD34;Rt14</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight>
+<IsABus ><T>Bool</T><D>0</D></IsABus></Item>
+<Item XName="Connect17" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;O3D34;GV14;eYD34;GV14</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight>
+<IsABus ><T>Bool</T><D>0</D></IsABus></Item>
+<Item XName="Connect18" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;mUG34;Rt14;KkG34;Rt14</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight>
+<IsABus ><T>Bool</T><D>0</D></IsABus></Item>
+<Item XName="Connect0" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;YJ2C;Rt14;GF2C;Rt14</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight>
+<IsABus ><T>Bool</T><D>0</D></IsABus></Item>
+<Item XName="Connect1" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;YJ2C;GV14;GF2C;GV14</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight>
+<IsABus ><T>Bool</T><D>0</D></IsABus></Item>
+<Item XName="Part0" Type="SchPart" >
+<Designator >I1</Designator>
+<PosX ><T>Double</T><D>-3249.9999999999991</D></PosX>
+<PosY ><T>Double</T><D>-375</D></PosY>
+<Symbol >AutoSymDF</Symbol>
+<CenterX ><T>Double</T><D>250</D></CenterX>
+<CenterY ><T>Double</T><D>250</D></CenterY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Item XName="DrawParams" Type="DrawGroup" >
+<ZOrder ><T>Int</T><D>1</D></ZOrder>
+<Visible ><T>Bool</T><D>1</D></Visible>
+<PosX ><T>Double</T><D>1416.25</D></PosX>
+<PosY ><T>Double</T><D>1045</D></PosY>
+<Item XName="__pI1" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>0</D></FontColor>
+<Text >I1 {in@alexnet_tools Models}</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="Override" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>8388736</D></FontColor>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<Text >Disabled: OPEN</Text>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>137.64666666666668</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pINPUT_FILE" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11184810</D></FontColor>
+<Text >INPUT_FILE=D:\my_systemvue_work\alexnet_tools\pict\1\0000&#x2026;</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>275.29333333333335</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item></Item></Item>
+<Item XName="Connect20" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;WcW2C;Rd24;MS2C;Rd24</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight></Item>
+<Item XName="Connect21" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;WcW2C;Vb24;MS2C;Vb24</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight></Item>
+<Item XName="Connect22" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;mx3;Rd24;R724;Rd24</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight></Item>
+<Item XName="Connect23" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;mx3;Vb24;R724;Vb24</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight></Item>
+<Item XName="Part15" Type="SchPart" >
+<Designator >D2</Designator>
+<PosX ><T>Double</T><D>2749</D></PosX>
+<PosY ><T>Double</T><D>2999.9999999999909</D></PosY>
+<Symbol >SYM_DynamicUnpack_M</Symbol>
+<CenterX ><T>Double</T><D>0</D></CenterX>
+<CenterY ><T>Double</T><D>0</D></CenterY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Item XName="DrawParams" Type="DrawGroup" >
+<ZOrder ><T>Int</T><D>1</D></ZOrder>
+<Visible ><T>Bool</T><D>1</D></Visible>
+<PosX ><T>Double</T><D>862.75</D></PosX>
+<PosY ><T>Double</T><D>310.625</D></PosY>
+<Item XName="__pD2" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>0</D></FontColor>
+<Text >D2 {DynamicUnpack_M@Data Flow Models}</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pFormat" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11141120</D></FontColor>
+<Text >Format=ColumnMajor</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>137.64666666666668</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item></Item></Item>
+<Item XName="Connect24" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;YZ24;Rd24;Vb24;Rd24</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight></Item>
+<Item XName="Connect25" Type="SchConnector" >
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderColor ><T>Int</T><D>0</D></BorderColor>
+<BorderStyle ><T>Int</T><D>0</D></BorderStyle>
+<BorderWeight ><T>Int</T><D>1</D></BorderWeight>
+<NetLabel Attrib="13" />
+<Coords ><T>Array_Dbl64</T><D>1;4;man24;Rd24;m2p24;Rd24</D></Coords>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<eLeft ><T>Int</T><D>1</D></eLeft>
+<eRight ><T>Int</T><D>1</D></eRight></Item>
+<Item XName="Part16" Type="SchPart" >
+<Designator >S3</Designator>
+<PosX ><T>Double</T><D>4874</D></PosX>
+<PosY ><T>Double</T><D>3000.0000000000186</D></PosY>
+<Symbol >SYM_Sink</Symbol>
+<CenterX ><T>Double</T><D>0</D></CenterX>
+<CenterY ><T>Double</T><D>0</D></CenterY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Description >Data Sink</Description>
+<Item XName="DrawParams" Type="DrawGroup" >
+<ZOrder ><T>Int</T><D>1</D></ZOrder>
+<Visible ><T>Bool</T><D>1</D></Visible>
+<PosX ><T>Double</T><D>596</D></PosX>
+<PosY ><T>Double</T><D>232.5</D></PosY>
+<Item XName="__pS3" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>0</D></FontColor>
+<Text >S3 {Sink@Data Flow Models}</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pStartStopOption" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11141120</D></FontColor>
+<Text >StartStopOption=Samples</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>137.64666666666668</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item></Item></Item>
+<Item XName="Part12" Type="SchPart" >
+<Designator >I2</Designator>
+<PosX ><T>Double</T><D>-4125</D></PosX>
+<PosY ><T>Double</T><D>2250</D></PosY>
+<Symbol >AutoSymDF</Symbol>
+<CenterX ><T>Double</T><D>250</D></CenterX>
+<CenterY ><T>Double</T><D>250</D></CenterY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Item XName="DrawParams" Type="DrawGroup" >
+<ZOrder ><T>Int</T><D>1</D></ZOrder>
+<Visible ><T>Bool</T><D>1</D></Visible>
+<PosX ><T>Double</T><D>1416.25</D></PosX>
+<PosY ><T>Double</T><D>1045</D></PosY>
+<Item XName="__pI2" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>0</D></FontColor>
+<Text >I2 {in@alexnet_tools Models}</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pINPUT_FILE" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11141120</D></FontColor>
+<Text >INPUT_FILE=D:\my_systemvue_work\alexnet_tools\pict\flower&#x2026;</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>137.64666666666668</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item></Item></Item>
+<Item XName="Part13" Type="SchPart" >
+<Designator >T1</Designator>
+<PosX ><T>Double</T><D>-2000</D></PosX>
+<PosY ><T>Double</T><D>2249.9999999999914</D></PosY>
+<Symbol >AutoSymDF</Symbol>
+<CenterX ><T>Double</T><D>250</D></CenterX>
+<CenterY ><T>Double</T><D>250</D></CenterY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Item XName="DrawParams" Type="DrawGroup" >
+<ZOrder ><T>Int</T><D>1</D></ZOrder>
+<Visible ><T>Bool</T><D>1</D></Visible>
+<PosX ><T>Double</T><D>1125</D></PosX>
+<PosY ><T>Double</T><D>1045</D></PosY>
+<Item XName="__pT1" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>0</D></FontColor>
+<Text >T1 {test_conv@alexnet_tools Models}</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pINPUT_FILE" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11141120</D></FontColor>
+<Text >INPUT_FILE=C:\Users\UCAS\Desktop\model_ways\model\conv1_1&#x2026;</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>137.64666666666668</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pLENGTH_OF_SIDE" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11141120</D></FontColor>
+<Text >LENGTH_OF_SIDE=11</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>275.29333333333335</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item></Item></Item>
+<Item XName="Part14" Type="SchPart" >
+<Designator >T2</Designator>
+<PosX ><T>Double</T><D>500</D></PosX>
+<PosY ><T>Double</T><D>2249.9999999999923</D></PosY>
+<Symbol >AutoSymDF</Symbol>
+<CenterX ><T>Double</T><D>250</D></CenterX>
+<CenterY ><T>Double</T><D>250</D></CenterY>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Item XName="DrawParams" Type="DrawGroup" >
+<ZOrder ><T>Int</T><D>1</D></ZOrder>
+<Visible ><T>Bool</T><D>1</D></Visible>
+<PosX ><T>Double</T><D>1125</D></PosX>
+<PosY ><T>Double</T><D>1045</D></PosY>
+<Item XName="__pT2" Type="SchParameter" >
+<Visible ><T>Bool</T><D>1</D></Visible>
+<FontColor ><T>Int</T><D>0</D></FontColor>
+<Text >T2 {test_fc@alexnet_tools Models}</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>0</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item>
+<Item XName="_pINPUT_FILE" Type="SchParameter" >
+<FontColor ><T>Int</T><D>11141120</D></FontColor>
+<Text >INPUT_FILE=C:\Users\UCAS\Desktop\model_ways\model\fc1_(11&#x2026;</Text>
+<Filled ><T>Bool</T><D>0</D></Filled>
+<BorderStyle ><T>Int</T><D>5</D></BorderStyle>
+<PosX ><T>Double</T><D>0</D></PosX>
+<PosY ><T>Double</T><D>137.64666666666668</D></PosY>
+<Justification ><T>Int</T><D>1</D></Justification></Item></Item></Item></Item>
+<Item XName="PartLength" Type="Param" >
+<DataEntry >1</DataEntry>
+<Unit ><T>Int</T><D>6003</D></Unit>
+<Data ><T>Double</T><D>0.0254</D></Data></Item>
+<Item XName="Height" Type="Param" >
+<DataEntry >8</DataEntry>
+<Unit ><T>Int</T><D>6003</D></Unit>
+<Data ><T>Double</T><D>0.2032</D></Data></Item>
+<Item XName="Width" Type="Param" >
+<DataEntry >11</DataEntry>
+<Unit ><T>Int</T><D>6003</D></Unit>
+<Data ><T>Double</T><D>0.2794</D></Data></Item>
+<Item XName="Font" Type="Font" >
+<Size ><T>Double</T><D>111.11111111111111</D></Size>
+<Name >Arial</Name>
+<Color ><T>Int</T><D>0</D></Color>
+<Weight ><T>Int</T><D>400</D></Weight>
+<Italic ><T>Int</T><D>0</D></Italic>
+<Angle ><T>Int</T><D>0</D></Angle></Item>
+<Shown ><T>Int</T><D>15354</D></Shown>
+<ShowPage ><T>Int</T><D>0</D></ShowPage>
+<Units ><T>Int</T><D>6003</D></Units>
+<SymScale ><T>Double</T><D>1</D></SymScale>
+<SymRotate ><T>Double</T><D>0</D></SymRotate>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<SchVer ><T>Int</T><D>1</D></SchVer></Item>
+<Intent ><T>Int</T><D>1</D></Intent>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Item XName="Connectivity" Type="DesignTopology" >
+<Item XName="N1" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part10</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >input</PinName>
+<TermNum >1</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >22</NetName>
+<MappedSchObject >Connect18</MappedSchObject></Item></Item>
+<PartID >D1</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect18</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >22</ResolvedNetName></Item></Item>
+<Item XName="N2" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part10</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >output</PinName>
+<TermNum >2</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >23</NetName>
+<MappedSchObject >Connect19</MappedSchObject></Item></Item>
+<PartID >D1</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect19</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >23</ResolvedNetName></Item></Item>
+<Item XName="N3" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part10</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >numRows</PinName>
+<TermNum >3</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >19</NetName></Item></Item>
+<PartID >D1</PartID></Item></Item>
+<Item XName="N4" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part10</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >numColumns</PinName>
+<TermNum >4</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >21</NetName></Item></Item>
+<PartID >D1</PartID></Item></Item>
+<Item XName="N5" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part11</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >input</PinName>
+<TermNum >1</TermNum>
+<IsMultiport ><T>Bool</T><D>1</D></IsMultiport>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >23</NetName>
+<MappedSchObject >Connect19</MappedSchObject></Item></Item>
+<PartID >S2</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect19</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >23</ResolvedNetName></Item></Item>
+<Item XName="N6" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part1</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_D</PinName>
+<TermNum >1</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >1</NetName>
+<MappedSchObject >Connect0</MappedSchObject></Item></Item>
+<PartID >L1</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect0</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >1</ResolvedNetName></Item></Item>
+<Item XName="N7" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part1</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_N</PinName>
+<TermNum >2</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >2</NetName>
+<MappedSchObject >Connect1</MappedSchObject></Item></Item>
+<PartID >L1</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect1</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >2</ResolvedNetName></Item></Item>
+<Item XName="N8" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part1</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_D</PinName>
+<TermNum >3</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >5</NetName>
+<MappedSchObject >Connect2</MappedSchObject></Item></Item>
+<PartID >L1</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect2</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >5</ResolvedNetName></Item></Item>
+<Item XName="N9" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part1</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_N</PinName>
+<TermNum >4</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >3</NetName>
+<MappedSchObject >Connect3</MappedSchObject></Item></Item>
+<PartID >L1</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect3</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >3</ResolvedNetName></Item></Item>
+<Item XName="N10" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part4</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_D</PinName>
+<TermNum >1</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >9</NetName>
+<MappedSchObject >Connect6</MappedSchObject></Item></Item>
+<PartID >L4</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect6</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >9</ResolvedNetName></Item></Item>
+<Item XName="N11" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part4</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_N</PinName>
+<TermNum >2</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >10</NetName>
+<MappedSchObject >Connect7</MappedSchObject></Item></Item>
+<PartID >L4</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect7</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >10</ResolvedNetName></Item></Item>
+<Item XName="N12" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part4</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_D</PinName>
+<TermNum >3</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >8</NetName>
+<MappedSchObject >Connect8</MappedSchObject></Item></Item>
+<PartID >L4</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect8</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >8</ResolvedNetName></Item></Item>
+<Item XName="N13" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part4</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_N</PinName>
+<TermNum >4</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >7</NetName>
+<MappedSchObject >Connect9</MappedSchObject></Item></Item>
+<PartID >L4</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect9</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >7</ResolvedNetName></Item></Item>
+<Item XName="N14" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part3</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_D</PinName>
+<TermNum >1</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >6</NetName>
+<MappedSchObject >Connect4</MappedSchObject></Item></Item>
+<PartID >L3</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect4</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >6</ResolvedNetName></Item></Item>
+<Item XName="N15" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part3</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_N</PinName>
+<TermNum >2</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >4</NetName>
+<MappedSchObject >Connect5</MappedSchObject></Item></Item>
+<PartID >L3</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect5</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >4</ResolvedNetName></Item></Item>
+<Item XName="N16" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part3</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_D</PinName>
+<TermNum >3</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >9</NetName>
+<MappedSchObject >Connect6</MappedSchObject></Item></Item>
+<PartID >L3</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect6</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >9</ResolvedNetName></Item></Item>
+<Item XName="N17" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part3</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_N</PinName>
+<TermNum >4</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >10</NetName>
+<MappedSchObject >Connect7</MappedSchObject></Item></Item>
+<PartID >L3</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect7</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >10</ResolvedNetName></Item></Item>
+<Item XName="N18" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part2</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_D</PinName>
+<TermNum >1</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >5</NetName>
+<MappedSchObject >Connect2</MappedSchObject></Item></Item>
+<PartID >L2</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect2</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >5</ResolvedNetName></Item></Item>
+<Item XName="N19" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part2</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_N</PinName>
+<TermNum >2</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >3</NetName>
+<MappedSchObject >Connect3</MappedSchObject></Item></Item>
+<PartID >L2</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect3</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >3</ResolvedNetName></Item></Item>
+<Item XName="N20" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part2</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_D</PinName>
+<TermNum >3</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >6</NetName>
+<MappedSchObject >Connect4</MappedSchObject></Item></Item>
+<PartID >L2</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect4</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >6</ResolvedNetName></Item></Item>
+<Item XName="N21" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part2</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_N</PinName>
+<TermNum >4</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >4</NetName>
+<MappedSchObject >Connect5</MappedSchObject></Item></Item>
+<PartID >L2</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect5</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >4</ResolvedNetName></Item></Item>
+<Item XName="N22" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part5</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_D</PinName>
+<TermNum >1</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >8</NetName>
+<MappedSchObject >Connect8</MappedSchObject></Item></Item>
+<PartID >L5</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect8</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >8</ResolvedNetName></Item></Item>
+<Item XName="N23" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part5</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_N</PinName>
+<TermNum >2</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >7</NetName>
+<MappedSchObject >Connect9</MappedSchObject></Item></Item>
+<PartID >L5</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect9</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >7</ResolvedNetName></Item></Item>
+<Item XName="N24" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part5</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_D</PinName>
+<TermNum >3</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >12</NetName>
+<MappedSchObject >Connect10</MappedSchObject></Item></Item>
+<PartID >L5</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect10</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >12</ResolvedNetName></Item></Item>
+<Item XName="N25" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part5</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_N</PinName>
+<TermNum >4</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >11</NetName>
+<MappedSchObject >Connect11</MappedSchObject></Item></Item>
+<PartID >L5</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect11</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >11</ResolvedNetName></Item></Item>
+<Item XName="N26" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part6</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_D</PinName>
+<TermNum >1</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >12</NetName>
+<MappedSchObject >Connect10</MappedSchObject></Item></Item>
+<PartID >L6</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect10</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >12</ResolvedNetName></Item></Item>
+<Item XName="N27" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part6</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_N</PinName>
+<TermNum >2</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >11</NetName>
+<MappedSchObject >Connect11</MappedSchObject></Item></Item>
+<PartID >L6</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect11</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >11</ResolvedNetName></Item></Item>
+<Item XName="N28" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part6</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_1</PinName>
+<TermNum >3</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >14</NetName>
+<MappedSchObject >Connect12</MappedSchObject></Item></Item>
+<PartID >L6</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect12</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >14</ResolvedNetName></Item></Item>
+<Item XName="N29" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part6</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_N</PinName>
+<TermNum >4</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >13</NetName>
+<MappedSchObject >Connect13</MappedSchObject></Item></Item>
+<PartID >L6</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect13</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >13</ResolvedNetName></Item></Item>
+<Item XName="N30" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part7</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_D</PinName>
+<TermNum >1</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >14</NetName>
+<MappedSchObject >Connect12</MappedSchObject></Item></Item>
+<PartID >L7</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect12</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >14</ResolvedNetName></Item></Item>
+<Item XName="N31" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part7</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_N</PinName>
+<TermNum >2</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >13</NetName>
+<MappedSchObject >Connect13</MappedSchObject></Item></Item>
+<PartID >L7</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect13</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >13</ResolvedNetName></Item></Item>
+<Item XName="N32" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part7</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_1</PinName>
+<TermNum >3</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >15</NetName>
+<MappedSchObject >Connect14</MappedSchObject></Item></Item>
+<PartID >L7</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect14</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >15</ResolvedNetName></Item></Item>
+<Item XName="N33" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part7</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_N</PinName>
+<TermNum >4</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >16</NetName>
+<MappedSchObject >Connect15</MappedSchObject></Item></Item>
+<PartID >L7</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect15</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >16</ResolvedNetName></Item></Item>
+<Item XName="N34" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part8</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_D</PinName>
+<TermNum >1</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >15</NetName>
+<MappedSchObject >Connect14</MappedSchObject></Item></Item>
+<PartID >L8</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect14</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >15</ResolvedNetName></Item></Item>
+<Item XName="N35" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part8</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_N</PinName>
+<TermNum >2</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >16</NetName>
+<MappedSchObject >Connect15</MappedSchObject></Item></Item>
+<PartID >L8</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect15</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >16</ResolvedNetName></Item></Item>
+<Item XName="N36" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part8</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_1</PinName>
+<TermNum >3</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >18</NetName>
+<MappedSchObject >Connect16</MappedSchObject></Item></Item>
+<PartID >L8</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect16</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >18</ResolvedNetName></Item></Item>
+<Item XName="N37" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part8</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_N</PinName>
+<TermNum >4</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >20</NetName>
+<MappedSchObject >Connect17</MappedSchObject></Item></Item>
+<PartID >L8</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect17</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >20</ResolvedNetName></Item></Item>
+<Item XName="N38" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part9</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_D</PinName>
+<TermNum >1</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >18</NetName>
+<MappedSchObject >Connect16</MappedSchObject></Item></Item>
+<PartID >S1</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect16</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >18</ResolvedNetName></Item></Item>
+<Item XName="N39" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part9</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_N</PinName>
+<TermNum >2</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >20</NetName>
+<MappedSchObject >Connect17</MappedSchObject></Item></Item>
+<PartID >S1</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect17</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >20</ResolvedNetName></Item></Item>
+<Item XName="N40" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part9</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_D</PinName>
+<TermNum >3</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >22</NetName>
+<MappedSchObject >Connect18</MappedSchObject></Item></Item>
+<PartID >S1</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect18</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >22</ResolvedNetName></Item></Item>
+<Item XName="N41" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part9</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_N</PinName>
+<TermNum >4</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >17</NetName></Item></Item>
+<PartID >S1</PartID></Item></Item>
+<Item XName="N42" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part0</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_D</PinName>
+<TermNum >1</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >1</NetName>
+<MappedSchObject >Connect0</MappedSchObject></Item></Item>
+<PartID >I1</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect0</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >1</ResolvedNetName></Item></Item>
+<Item XName="N43" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part0</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_N</PinName>
+<TermNum >2</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >2</NetName>
+<MappedSchObject >Connect1</MappedSchObject></Item></Item>
+<PartID >I1</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect1</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >2</ResolvedNetName></Item></Item>
+<Item XName="N44" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part15</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >input</PinName>
+<TermNum >1</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >26</NetName>
+<MappedSchObject >Connect24</MappedSchObject></Item></Item>
+<PartID >D2</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect24</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >26</ResolvedNetName></Item></Item>
+<Item XName="N45" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part15</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >output</PinName>
+<TermNum >2</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >30</NetName>
+<MappedSchObject >Connect25</MappedSchObject></Item></Item>
+<PartID >D2</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect25</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >30</ResolvedNetName></Item></Item>
+<Item XName="N46" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part15</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >numRows</PinName>
+<TermNum >3</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >32</NetName></Item></Item>
+<PartID >D2</PartID></Item></Item>
+<Item XName="N47" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part15</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >numColumns</PinName>
+<TermNum >4</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >33</NetName></Item></Item>
+<PartID >D2</PartID></Item></Item>
+<Item XName="N48" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part16</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >input</PinName>
+<TermNum >1</TermNum>
+<IsMultiport ><T>Bool</T><D>1</D></IsMultiport>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >30</NetName>
+<MappedSchObject >Connect25</MappedSchObject></Item></Item>
+<PartID >S3</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect25</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >30</ResolvedNetName></Item></Item>
+<Item XName="N49" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part12</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_D</PinName>
+<TermNum >1</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >24</NetName>
+<MappedSchObject >Connect20</MappedSchObject></Item></Item>
+<PartID >I2</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect20</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >24</ResolvedNetName></Item></Item>
+<Item XName="N50" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part12</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_N</PinName>
+<TermNum >2</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >25</NetName>
+<MappedSchObject >Connect21</MappedSchObject></Item></Item>
+<PartID >I2</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect21</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >25</ResolvedNetName></Item></Item>
+<Item XName="N51" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part13</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_D</PinName>
+<TermNum >1</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >24</NetName>
+<MappedSchObject >Connect20</MappedSchObject></Item></Item>
+<PartID >T1</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect20</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >24</ResolvedNetName></Item></Item>
+<Item XName="N52" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part13</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_N</PinName>
+<TermNum >2</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >25</NetName>
+<MappedSchObject >Connect21</MappedSchObject></Item></Item>
+<PartID >T1</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect21</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >25</ResolvedNetName></Item></Item>
+<Item XName="N53" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part13</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_D</PinName>
+<TermNum >3</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >28</NetName>
+<MappedSchObject >Connect22</MappedSchObject></Item></Item>
+<PartID >T1</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect22</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >28</ResolvedNetName></Item></Item>
+<Item XName="N54" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part13</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_N</PinName>
+<TermNum >4</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >27</NetName>
+<MappedSchObject >Connect23</MappedSchObject></Item></Item>
+<PartID >T1</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect23</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >27</ResolvedNetName></Item></Item>
+<Item XName="N55" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part14</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_D</PinName>
+<TermNum >1</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >28</NetName>
+<MappedSchObject >Connect22</MappedSchObject></Item></Item>
+<PartID >T2</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect22</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >28</ResolvedNetName></Item></Item>
+<Item XName="N56" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part14</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<PinName >IN_N</PinName>
+<TermNum >2</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >27</NetName>
+<MappedSchObject >Connect23</MappedSchObject></Item></Item>
+<PartID >T2</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect23</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<ResolvedNetName >27</ResolvedNetName></Item></Item>
+<Item XName="N57" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part14</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_1</PinName>
+<TermNum >3</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >26</NetName>
+<MappedSchObject >Connect24</MappedSchObject></Item></Item>
+<PartID >T2</PartID></Item>
+<Item XName="C1" Type="ConnEndpoint" >
+<SchObject >Connect24</SchObject>
+<Direction ><T>Int</T><D>0</D></Direction>
+<ResolvedNetName >26</ResolvedNetName></Item></Item>
+<Item XName="N58" Type="Nexus" >
+<Item XName="P1" Type="PartPin" >
+<SchObject >Part14</SchObject>
+<Direction ><T>Int</T><D>1</D></Direction>
+<PinName >OUT_N</PinName>
+<TermNum >4</TermNum>
+<Item XName="Subterminals" Type="SerItem" >
+<Item XName="T1" Type="SubTerm" >
+<NetName >29</NetName></Item></Item>
+<PartID >T2</PartID></Item></Item></Item></Item>
+<Item XName="Design1 Analysis" UserName="Design1 Analysis" Type="Data Flow Analysis" >
+<Item XName="Temperature" UserName="RoomTemp" Help="8228" Type="Param" >
+<DataEntry >27.0</DataEntry>
+<Unit ><T>Int</T><D>12001</D></Unit>
+<Data ><T>Double</T><D>27</D></Data></Item>
+<Item XName="DesignName" Type="Param" >
+<Data >Design1</Data>
+<TextParam ><T>Bool</T><D>1</D></TextParam>
+<DataEntry >Design1</DataEntry></Item>
+<Item XName="DCAnalysis" Type="Param" >
+<Data /></Item>
+<Item XName="HBAnalysis" Type="Param" >
+<Data /></Item>
+<Item XName="DataName" Type="Param" >
+<Data />
+<TextParam ><T>Bool</T><D>1</D></TextParam>
+<DataEntry /></Item>
+<NeedRun ><T>Bool</T><D>0</D></NeedRun>
+<Item XName="CustomSinks" Type="SerItem" />
+<Item XName="Start_Time" Type="Param" >
+<Data ><T>Double</T><D>0</D></Data>
+<Unit ><T>Int</T><D>7002</D></Unit></Item>
+<Item XName="Stop_Time" Type="Param" >
+<Data ><T>Double</T><D>0.000999</D></Data>
+<Unit ><T>Int</T><D>7002</D></Unit></Item>
+<Item XName="Time_Spacing" Type="Param" >
+<Data ><T>Double</T><D>9.9999999999999995e-007</D></Data>
+<Unit ><T>Int</T><D>7002</D></Unit></Item>
+<Item XName="Num_Samples" Type="Param" >
+<Data ><T>Double</T><D>1000</D></Data>
+<DataEntry >1000</DataEntry></Item>
+<Item XName="Sample_Rate" Type="Param" >
+<Data ><T>Double</T><D>1000000</D></Data>
+<Unit ><T>Int</T><D>1000</D></Unit>
+<DataEntry >1</DataEntry></Item>
+<Item XName="Freq_Resolution" Type="Param" >
+<Data ><T>Double</T><D>1000</D></Data>
+<Unit ><T>Int</T><D>1001</D></Unit></Item>
+<Item XName="Data_Persistence" Type="Param" >
+<Data ><T>Bool</T><D>0</D></Data></Item>
+<Item XName="Cycle_Accurate" Type="Param" >
+<Data ><T>Bool</T><D>1</D></Data></Item>
+<Item XName="ScheduleLogFile" Type="Param" >
+<Data /></Item>
+<Item XName="ProfileTimesFile" Type="Param" >
+<Data /></Item>
+<Item XName="DefaultSeed" Type="Param" >
+<Data >1234567</Data></Item>
+<Item XName="TimeStart" Type="Param" >
+<Data ><T>Double</T><D>0</D></Data>
+<Unit ><T>Int</T><D>7002</D></Unit></Item>
+<Item XName="TimeStop" Type="Param" >
+<Data ><T>Double</T><D>1</D></Data>
+<Unit ><T>Int</T><D>7002</D></Unit></Item>
+<Item XName="TimeSpacing" Type="Param" >
+<Data ><T>Double</T><D>0.000977</D></Data>
+<Unit ><T>Int</T><D>7002</D></Unit></Item>
+<Item XName="NumSamples" Type="Param" >
+<Data ><T>Int</T><D>1024</D></Data></Item>
+<Item XName="SampleRate" Type="Param" >
+<Data ><T>Double</T><D>0.000977</D></Data>
+<Unit ><T>Int</T><D>1000</D></Unit></Item>
+<Item XName="FreqRes" Type="Param" >
+<Data ><T>Double</T><D>9.9999999999999995e-007</D></Data>
+<Unit ><T>Int</T><D>1000</D></Unit></Item>
+<Item XName="DefaultTimeStart" Type="Param" >
+<Data ><T>Double</T><D>0</D></Data>
+<Unit ><T>Int</T><D>7002</D></Unit>
+<DataEntry >0</DataEntry></Item>
+<Item XName="DefaultTimeStop" Type="Param" >
+<Data ><T>Double</T><D>9.9999999999999991e-005</D></Data>
+<Unit ><T>Int</T><D>7002</D></Unit>
+<DataEntry >100</DataEntry></Item>
+<Item XName="DefaultNumericStart" Type="Param" >
+<Data ><T>Double</T><D>0</D></Data>
+<DataEntry >0</DataEntry></Item>
+<Item XName="DefaultNumericStop" Type="Param" >
+<Data ><T>Double</T><D>100</D></Data>
+<DataEntry >100</DataEntry></Item>
+<OutList ><T>Array_BString</T><D>1;0;</D></OutList>
+<AutoRecalc ><T>Bool</T><D>0</D></AutoRecalc>
+<AutoSave ><T>Int</T><D>0</D></AutoSave>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Item XName="ConfigurationName" Type="Param" >
+<Data />
+<TextParam ><T>Bool</T><D>1</D></TextParam>
+<DataEntry /></Item></Item>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Item XName="Design1 Analysis_Design1_Data" UserName="Design1 Analysis_Design1_Data" Type="DataSet" >
+<Item XName="Eqns" Type="Equation" >
+<Item XName="EqnBlock" Type="EqnBlock" >
+<Lang ><T>Int</T><D>1</D></Lang></Item>
+<Item XName="VarBlock" Type="VarBlock" >
+<Item XName="LogOutput" Type="Variable" >
+<Data >Data Flow Analysis : Design1 Analysis&#x000D;&#x000A;2018/3/30..16:46&#x000D;&#x000A;Ambient Temperature[C]=27.000000&#x000D;&#x000A;Information: test_conv &apos;Design1.T1&apos;: converting finished!&#x000D;&#x000A;&#x000D;&#x000A;Information: test_fc &apos;Design1.T2&apos;: fully connected finished!&#x000D;&#x000A;&#x000D;&#x000A;Execution time: 0.664 sec&#x000D;&#x000A;</Data>
+<ByAnalysis ><T>Bool</T><D>1</D></ByAnalysis></Item></Item>
+<Item XName="FunctionBlock" Type="FunctionBlock" />
+<Item XName="BPMgr" Type="BPMgr" >
+<BPLines ><T>Empty</T></BPLines>
+<BPStates ><T>Empty</T></BPStates></Item>
+<Item XName="Font" Type="Font" >
+<Size ><T>Double</T><D>125</D></Size>
+<Name >Courier New</Name></Item></Item>
+<Item XName="Font" Type="Font" >
+<Size ><T>Double</T><D>125</D></Size></Item>
+<Selected ><T>Bool</T><D>0</D></Selected>
+<Item XName="Page" Type="PageMgr" >
+<Item XName="Display0" Type="DataSetDisp" >
+<SelVar >S3</SelVar>
+<Split ><T>Double</T><D>0.2</D></Split>
+<SubSplit ><T>Double</T><D>0.2</D></SubSplit>
+<PVPort ><T>Array_Dbl64</T><D>1;4;;;EgYJriu734;3YWTNBZTi24</D></PVPort>
+<DVport ><T>Array_Dbl64</T><D>1;4;;;3H24;Kq14</D></DVport>
+<Window ><T>Array_I64</T><D>1;4;3;1;U3;h</D></Window>
+<ShowCmd ><T>Int</T><D>3</D></ShowCmd>
+<Show ><T>Bool</T><D>1</D></Show>
+<ZOrder ><T>Int</T><D>0</D></ZOrder></Item></Item>
+<FullPath >Designs\Design1 Analysis_Design1_Data</FullPath></Item></Item>
+<Time >2018:089:16:59</Time>
+<Item XName="TuneList" Type="TuneList" />
+<ClientWnd ><T>Array_I64</T><D>1;4;;;7H;95</D></ClientWnd>
+<Ver ><T>Double</T><D>2011.03</D></Ver>
+<Item XName="Equation1" UserName="Equation1" Type="Equation" >
+<Item XName="EqnBlock" Type="EqnBlock" >
+<Lang ><T>Int</T><D>1</D></Lang></Item>
+<Item XName="VarBlock" Type="VarBlock" />
+<Item XName="FunctionBlock" Type="FunctionBlock" />
+<Item XName="BPMgr" Type="BPMgr" >
+<BPLines ><T>Empty</T></BPLines>
+<BPStates ><T>Empty</T></BPStates></Item>
+<Item XName="Font" Type="Font" >
+<Size ><T>Double</T><D>125</D></Size>
+<Name >Courier New</Name></Item>
+<UnitUse ><T>Int</T><D>2</D></UnitUse>
+<Item XName="Page" Type="PageMgr" >
+<Item XName="Display0" Type="EquationDisp" >
+<Split ><T>Double</T><D>0.3</D></Split>
+<Split2 ><T>Double</T><D>0.3</D></Split2>
+<PVPort ><T>Array_Dbl64</T><D>1;4;;;ytlV}{zH}24;6DQqeHH2v24</D></PVPort>
+<DVport ><T>Array_Dbl64</T><D>1;4;;;224;qy14</D></DVport>
+<Window ><T>Array_I64</T><D>1;4;4;3;U;F</D></Window>
+<ShowCmd ><T>Int</T><D>1</D></ShowCmd>
+<Show ><T>Bool</T><D>0</D></Show>
+<ZOrder ><T>Int</T><D>1</D></ZOrder></Item></Item>
+<Selected ><T>Bool</T><D>0</D></Selected></Item>
+<Item XName="WorkspaceVariables" Attrib="14" Type="Equation" >
+<Item XName="EqnBlock" Type="EqnBlock" >
+<Lang ><T>Int</T><D>1</D></Lang></Item>
+<Item XName="VarBlock" Type="VarBlock" />
+<Item XName="FunctionBlock" Type="FunctionBlock" />
+<Item XName="BPMgr" Type="BPMgr" >
+<BPLines ><T>Empty</T></BPLines>
+<BPStates ><T>Empty</T></BPStates></Item>
+<Item XName="Font" Type="Font" >
+<Size ><T>Double</T><D>125</D></Size>
+<Name >Courier New</Name></Item>
+<AutoCalc ><T>Bool</T><D>0</D></AutoCalc>
+<Selected ><T>Bool</T><D>0</D></Selected></Item>
+<Item XName="GlobalEqns" Attrib="14" Type="Equation" >
+<Item XName="VarBlock" Type="VarBlock" >
+<Item XName="Data_Persistence" Type="Variable" >
+<Creator >GlobalEqns</Creator>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="FREQ" Type="Variable" >
+<Creator >GlobalEqns</Creator>
+<Data ><T>Double</T><D>1000000</D></Data></Item>
+<Item XName="Freq_Resolution" Type="Variable" >
+<Creator >GlobalEqns</Creator>
+<Unit ><T>Int</T><D>1001</D></Unit>
+<Data ><T>Double</T><D>1000</D></Data></Item>
+<Item XName="Num_Samples" Type="Variable" >
+<Creator >GlobalEqns</Creator>
+<Data ><T>Double</T><D>1000</D></Data></Item>
+<Item XName="Num_Samples_SC" Type="Variable" >
+<Creator >GlobalEqns</Creator>
+<Data ><T>Double</T><D>1001</D></Data></Item>
+<Item XName="Sample_Rate" Type="Variable" >
+<Creator >GlobalEqns</Creator>
+<Unit ><T>Int</T><D>1001</D></Unit>
+<Data ><T>Double</T><D>1000000</D></Data></Item>
+<Item XName="Start_Time" Type="Variable" >
+<Creator >GlobalEqns</Creator>
+<Unit ><T>Int</T><D>7004</D></Unit>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="Start_Time_SC" Type="Variable" >
+<Creator >GlobalEqns</Creator>
+<Unit ><T>Int</T><D>7004</D></Unit>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="Stop_Time" Type="Variable" >
+<Creator >GlobalEqns</Creator>
+<Unit ><T>Int</T><D>7004</D></Unit>
+<Data ><T>Double</T><D>0.000999</D></Data></Item>
+<Item XName="Stop_Time_SC" Type="Variable" >
+<Creator >GlobalEqns</Creator>
+<Unit ><T>Int</T><D>7004</D></Unit>
+<Data ><T>Double</T><D>1</D></Data></Item>
+<Item XName="TEMPERATURE" Type="Variable" >
+<Creator >GlobalEqns</Creator>
+<Data ><T>Double</T><D>16.85</D></Data></Item>
+<Item XName="TIME" Type="Variable" >
+<Creator >GlobalEqns</Creator>
+<Data ><T>Double</T><D>0</D></Data></Item>
+<Item XName="Time_Spacing" Type="Variable" >
+<Creator >GlobalEqns</Creator>
+<Unit ><T>Int</T><D>7004</D></Unit>
+<Data ><T>Double</T><D>9.9999999999999995e-007</D></Data></Item></Item>
+<Item XName="FunctionBlock" Type="FunctionBlock" />
+<Item XName="BPMgr" Type="BPMgr" >
+<BPLines ><T>Empty</T></BPLines>
+<BPStates ><T>Empty</T></BPStates></Item>
+<Item XName="Font" Type="Font" >
+<Size ><T>Double</T><D>125</D></Size>
+<Name >Courier New</Name></Item>
+<Text >FREQ=1e6;&#x000D;&#x000A;TIME=0.0;&#x000D;&#x000A;TEMPERATURE=16.85;&#x000D;&#x000A;Start_Time=0.0000000000000000e+000;&#x000D;&#x000A;setdisplayunit(Start_Time, &apos;s&apos;);&#x000D;&#x000A;Stop_Time=9.9900000000000010e-004;&#x000D;&#x000A;setdisplayunit(Stop_Time, &apos;s&apos;);&#x000D;&#x000A;Time_Spacing=9.9999999999999995e-007;&#x000D;&#x000A;setdisplayunit(Time_Spacing, &apos;s&apos;);&#x000D;&#x000A;Num_Samples=1.0000000000000000e+003;&#x000D;&#x000A;Sample_Rate=1.0000000000000000e+006;&#x000D;&#x000A;setdisplayunit(Sample_Rate, &apos;Hz&apos;);&#x000D;&#x000A;Freq_Resolution=1.0000000000000000e+003;&#x000D;&#x000A;setdisplayunit(Freq_Resolution, &apos;Hz&apos;);&#x000D;&#x000A;Data_Persistence=0.0000000000000000e+000;&#x000D;&#x000A;Start_Time_SC=0;&#x000D;&#x000A;setdisplayunit(Start_Time_SC, &apos;s&apos;);&#x000D;&#x000A;Stop_Time_SC=1;&#x000D;&#x000A;setdisplayunit(Stop_Time_SC, &apos;s&apos;);&#x000D;&#x000A;Num_Samples_SC=1001;&#x000D;&#x000A;</Text></Item></Item> 
